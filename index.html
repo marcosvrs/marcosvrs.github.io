@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/public/">
+    <title>Marcos Vinícius</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="css/marcosvrs.min.css" rel="stylesheet">
+</head>
+
+<body ng-app="marcosvrs" ng-controller="AppController as app">
+
+    <div ui-view="nav"></div>
+    <div class="container-fluid">
+        <header class="row" ui-view="header"></header>
+        <section class="row view" ng-swipe-left="app.backward()" ng-swipe-right="app.forward()" ui-view></section>
+        <footer class="row" ui-view="footer"></footer>
+    </div>
+
+    <script src="js/marcosvrs.min.js"></script>
+
+</body>
+
+</html>

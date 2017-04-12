@@ -1,0 +1,59 @@
+{
+  "name": "marcosvrs",
+  "version": "0.0.0",
+  "description": "My Website",
+  "license": "MIT",
+  "main": "server.js",
+  "author": "Marcos Vinícius Rubido",
+  "scripts": {
+    "start": "nodemon server.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosvrs/website.git"
+  },
+  "homepage": "https://github.com/marcosvrs/website#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "@types/angular": "^1.6.14",
+    "angular": "^1.6.3",
+    "angular-animate": "^1.6.3",
+    "angular-cookie": "^4.1.0",
+    "angular-touch": "^1.6.4",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-router": "^0.4.2",
+    "angular-ui-scrollpoint": "^2.1.1",
+    "bootstrap": "^3.3.7",
+    "eslint": "^3.18.0",
+    "eslint-config-angular": "^0.5.0",
+    "eslint-plugin-angular": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-closure-compiler": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-image": "^2.7.6",
+    "gulp-less": "^3.3.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.1.2",
+    "scrollmagic": "^2.0.5"
+  },
+  "browserslist": [
+    "Chrome >=35",
+    "Firefox >=38",
+    "Edge >=12",
+    "Explorer >=10",
+    "iOS >=8",
+    "Safari >=8",
+    "Android 2.3",
+    "Android >=4",
+    "Opera >=12"
+  ]
+}

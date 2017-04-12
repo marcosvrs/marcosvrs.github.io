@@ -1,0 +1,7 @@
+{
+    "less": {
+        "style": [
+            "less/marcosvrs.less"
+        ]
+    }
+}

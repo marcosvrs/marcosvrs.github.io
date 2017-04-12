@@ -1,0 +1,13 @@
+{
+    "version": "0.1.0",
+    "command": "gulp",
+    "showOutput": "always",
+    "isShellCommand": true,
+    "tasks": [
+        {
+            "taskName": "default",
+            "isBuildCommand": true,
+            "isBackground": true
+        }
+    ]
+}
