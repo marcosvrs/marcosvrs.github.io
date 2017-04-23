@@ -1,5 +1,4 @@
 @import "node_modules/bootstrap/less/bootstrap.less";
-@import "mindmap.less";
 @icon-size: 32px;
 @long-animation: 1s ease-out;
 @default-animation: 0.3s ease-out;
@@ -131,6 +130,16 @@ footer {
     bottom: 0;
     z-index: @zindex-navbar-fixed;
     list-style: none;
+    margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
+    float: left;
+    >li {
+        float: left;
+        >a {
+            padding-top: @navbar-padding-vertical;
+            padding-bottom: @navbar-padding-vertical;
+            line-height: @line-height-computed;
+        }
+    }
 }
 
 .board {

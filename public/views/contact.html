@@ -17,17 +17,23 @@
         </div>
         <div class="col-md-4 col-md-offset-1">
             <form name="contact.contactForm" ng-submit="contact.submit()">
-                <div class="form-group" ng-class="{'has-error': contactForm.contactName.$touched && contactForm.contactName.$invalid, 'has-success': contactForm.contactName.$touched && contactForm.contactName.$valid}">
-                    <input type="text" class="form-control" placeholder="Name" name="contactName" ng-model="contact.name" ng-change="contact.createMessage()"
-                        required></input>
-                </div>
-                <div class="form-group" ng-class="{'has-error': contactForm.contactEmail.$touched && contactForm.contactEmail.$invalid, 'has-success': contactForm.contactEmail.$touched && contactForm.contactEmail.$valid}">
-                    <input type="email" class="form-control" placeholder="Email" name="contactEmail" ng-model="contact.email" ng-change="contact.createMessage()"
-                        required></input>
-                </div>
-                <div class="form-group" ng-class="{'has-error': contactForm.contactMessage.$touched && contactForm.contactMessage.$invalid, 'has-success': contactForm.contactMessage.$touched && contactForm.contactMessage.$valid}">
-                    <textarea class="form-control" rows="5" name="contactMessage" ng-model="contact.message" required></textarea>
-                </div>
+                <fieldset>
+                    <legend>Contact me!</legend>
+                    <div class="form-group" ng-class="{'has-error': contactForm.contactName.$touched && contactForm.contactName.$invalid, 'has-success': contactForm.contactName.$touched && contactForm.contactName.$valid}">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" placeholder="Marcos Vinícius" name="contactName" id="name" ng-model="contact.name" ng-change="contact.createMessage()"
+                            autofocus required></input>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error': contactForm.contactEmail.$touched && contactForm.contactEmail.$invalid, 'has-success': contactForm.contactEmail.$touched && contactForm.contactEmail.$valid}">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" placeholder="example@example.com" name="contactEmail" id="email" ng-model="contact.email" ng-change="contact.createMessage()"
+                            required></input>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error': contactForm.contactMessage.$touched && contactForm.contactMessage.$invalid, 'has-success': contactForm.contactMessage.$touched && contactForm.contactMessage.$valid}">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" rows="5" name="contactMessage" id="message" ng-model="contact.message" required></textarea>
+                    </div>
+                </fieldset>
                 <input type="submit" class="btn btn-default" ng-disabled="contact.contactForm.$pristine || contact.contactForm.$invalid"></input>
             </form>
         </div>
