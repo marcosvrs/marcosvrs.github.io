@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { HomeComponent } from './views/home/home.component';
 import { ResumeComponent } from './views/resume/resume.component';
 import { AboutComponent } from './views/about/about.component';
@@ -28,13 +29,13 @@ const routes: Routes = [
     component: TestimonialsComponent
   },
   {
-	  path: '**',
-	  redirectTo: '?error=404'
+    path: '**',
+    redirectTo: '/?error=404'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)], //, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
