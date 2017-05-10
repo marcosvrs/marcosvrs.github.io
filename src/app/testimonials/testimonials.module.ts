@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 
-import { AngularFireModule } from "angularfire2";
+import { AngularFireModule } from 'angularfire2';
 
 import { TestimonialsRoutingModule } from './testimonials-routing.module';
 import { TestimonialsComponent } from './testimonials.component';
@@ -12,12 +12,17 @@ import { TestimonialService } from "app/services/testimonial.service";
 
 import firebaseConfig from 'app/firebase.config.json';
 
+export const environment = {
+  production: true,
+  firebase: firebaseConfig
+};
+
 @NgModule({
   imports: [
     CommonModule,
     TestimonialsRoutingModule,
     FormsModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   declarations: [TestimonialsComponent, AddTestimonialComponent, TestimonialComponent],
   providers: [TestimonialService],

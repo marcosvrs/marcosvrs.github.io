@@ -1,16 +1,16 @@
 import { Injectable, isDevMode } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 
 import { Testimonial } from '../models/testimonial';
 
 @Injectable()
 export class TestimonialService {
 
-  constructor(private af: AngularFire) {
+  constructor(private db: AngularFireDatabase) {
   }
 
   getTestimonials(): FirebaseListObservable<Testimonial[]> {
-    return this.af.database.list('testimonials');
+    return this.db.list('testimonials');
   }
 
   addTestimonial(testimonial: Testimonial) {
@@ -20,7 +20,7 @@ export class TestimonialService {
       },
       (error: Error) => {
         if (isDevMode()) {
-        console.error(error);
+          console.error(error);
         }
         return false;
       }
