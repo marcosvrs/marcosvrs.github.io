@@ -1,22 +1,29 @@
-export class Testimonial {
-    private _id: string;
+interface ITestimonial {
+    name: string;
+    email: string;
+    title: string;
+    storie: string;
+}
+
+export class Testimonial implements ITestimonial {
     private _name: string;
+    private _email: string;
     private _title: string;
     private _storie: string;
 
-    constructor(id: string, name: string, title: string, storie: string) {
-        this._id = id;
-        this._name = name;
-        this._title = title;
-        this._storie = storie;
-    }
-
-    public get id(): string {
-        return this._id;
+    constructor(obj: ITestimonial) {
+        this._name = obj.name;
+        this._email = obj.email;
+        this._title = obj.title;
+        this._storie = obj.storie;
     }
 
     public get name(): string {
         return this._name;
+    }
+
+    public get email(): string {
+        return this._email;
     }
 
     public get title(): string {

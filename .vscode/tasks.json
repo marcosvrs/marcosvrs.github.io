@@ -13,6 +13,16 @@
             "isBackground": true
         },
         {
+            "taskName": "debug",
+            "args": ["debug"],
+            "isBackground": true
+        },
+        {
+            "taskName": "server",
+            "args": ["server"],
+            "isBackground": true
+        },
+        {
             "taskName": "build",
             "args": ["build"],
             "isBuildCommand": true

@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col">
+    <p>Hi!</p>
+    <div class="card-deck">
+      <app-testimonial class="card" *ngFor="let testimonial of testimonials | async" [testimonialInstance]="testimonial"></app-testimonial>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-secondary float-right" type="button" (click)="showModalClick()">Add Testimonial</button>
+  </div>
+</div>
+<app-add-testimonial class="modal fade" [ngStyle]="{display: showAddTestimonialModal ? 'block' : 'none'}" [ngClass]="{show: showAddTestimonialModal === true}"
+  (showModalClick)="showModalClick()"></app-add-testimonial>
