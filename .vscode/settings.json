@@ -1,11 +1,16 @@
-// Place your settings in this file to overwrite the default settings
+// Place your settings in this file to overwrite default and user settings.
 {
-    "files.autoSave": "afterDelay",
-    "workbench.welcome.enabled": false,
     "files.exclude": {
-        "node_modules": false
-    },
-    "search.exclude": {
-        "**/node_modules": false
+        "**/node_modules/[^b]*": true,
+        "**/node_modules/?[^o]*": true,
+        "**/node_modules/??[^o]*": true,
+        "**/node_modules/???[^t]*": true,
+        "**/node_modules/????[^s]*": true,
+        "**/node_modules/?????[^t]*": true,
+        "**/node_modules/??????[^r]*": true,
+        "**/node_modules/???????[^a]*": true,
+        "**/node_modules/????????[^p]*": true,
+        "**/node_modules/**/*.min*": true,
+        "**/node_modules/**/*.map": true
     }
 }
