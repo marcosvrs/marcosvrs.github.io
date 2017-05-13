@@ -1,7 +1,5 @@
 'use strict';
 
-//require('@google-cloud/debug-agent').start({ allowExpressions: true });
-
 const functions = require('firebase-functions');
 const nodemailer = require('nodemailer');
 const cors = require('cors')({ origin: true });
