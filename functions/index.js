@@ -11,8 +11,8 @@ const mailTransport = nodemailer.createTransport(`smtps://${gmailEmail}:${gmailP
 
 exports.sendMessage = functions.https.onRequest((req, res) => {
     cors(req, res, () => {
-        const mailOptions = { from: `"${req.body.contactName}" <${req.body.contactEmail}>`, to: 'marcosauda@outlook.com', subject: `Website Contact from: ${req.body.contactName}` };
-        mailOptions.text = `Name: ${req.body.contactName}\nEmail: ${req.body.contactEmail}\nMessage: ${req.body.contactMessage}`;
+        const mailOptions = { from: `"${req.body.name}" <${req.body.email}>`, to: 'marcosauda@outlook.com', subject: `Website Contact from: ${req.body.name}` };
+        mailOptions.text = `Name: ${req.body.name}\nEmail: ${req.body.email}\nMessage: ${req.body.message}`;
         mailTransport.sendMail(mailOptions).then((info) => {
             mailTransport.close();
             res.status(200).end();

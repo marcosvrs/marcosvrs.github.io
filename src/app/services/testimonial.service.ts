@@ -1,7 +1,7 @@
 import { Injectable, isDevMode } from '@angular/core';
 import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 
-import { Testimonial } from '../models/testimonial';
+import { Testimonial } from 'app/models/testimonial.model';
 
 @Injectable()
 export class TestimonialService {

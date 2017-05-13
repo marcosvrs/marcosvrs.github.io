@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseListObservable } from "angularfire2/database";
+import { FirebaseListObservable } from 'angularfire2/database';
 
-import { Testimonial } from "app/models/testimonial";
-import { TestimonialService } from "app/services/testimonial.service";
+import { Testimonial } from 'app/models/testimonial.model';
+import { TestimonialService } from 'app/services/testimonial.service';
 
 @Component({
   selector: 'app-testimonials',

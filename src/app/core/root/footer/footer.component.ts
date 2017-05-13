@@ -1,5 +1,5 @@
 import { Component, isDevMode } from '@angular/core';
-import { GoogleAnalyticsEventsService } from "app/services/google-analytics-events.service";
+import { GoogleAnalyticsEventsService } from 'app/services/google-analytics-events.service';
 
 @Component({
   selector: 'app-footer',

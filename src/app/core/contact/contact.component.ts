@@ -1,9 +1,10 @@
-import { Component, ViewChild, isDevMode } from '@angular/core';
-import { NgForm, NgModel, AbstractControl } from '@angular/forms';
+import { Component, ViewChild, isDevMode, AfterViewChecked, OnDestroy } from '@angular/core';
+import { NgForm, NgModel, AbstractControl, FormGroup } from '@angular/forms';
 
-import { Subscription } from "rxjs/Subscription";
-import { ContactService } from "app/services/contact.service";
-import { GoogleAnalyticsEventsService } from "app/services/google-analytics-events.service";
+import { Subscription } from 'rxjs/Subscription';
+import { Contact } from 'app/models/contact.model';
+import { ContactService } from 'app/services/contact.service';
+import { GoogleAnalyticsEventsService } from 'app/services/google-analytics-events.service';
 
 @Component({
   selector: 'app-contact',
@@ -14,60 +15,93 @@ import { GoogleAnalyticsEventsService } from "app/services/google-analytics-even
   styleUrls: ['./contact.component.scss'],
   providers: [ContactService, GoogleAnalyticsEventsService]
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewChecked, OnDestroy {
   @ViewChild('contactForm') contactForm: NgForm;
-  contactMessage = '';
   loading: boolean = false;
   error: boolean = false;
+  success: boolean = false;
+  contactNameSubscribe: Subscription;
+  contactEmailSubscribe: Subscription;
+  contactName: string = '';
+  contactEmail: string = '';
 
   constructor(private contactService: ContactService, private googleAnalyticsEventsService: GoogleAnalyticsEventsService) { }
 
-  onValueChange(event?: any) {
-    if (!this.contactForm) { return; }
-    const form = this.contactForm.form;
-    if (!form.contains('contactMessage')) { return; }
-    const contactMessageControl = form.get('contactMessage');
-    if (contactMessageControl && !contactMessageControl.touched) {
-      contactMessageControl.setValue('Hey Marcos!\nI just came to say hello!\n\nSincerely,\n' + form.value.contactName + '\n' + form.value.contactEmail);
+  ngAfterViewChecked() {
+    if (this.contactForm.form.contains('name') && !this.contactNameSubscribe) {
+      this.contactNameSubscribe = this.contactForm.form.get('name').valueChanges.subscribe((value) => this.onValueChanges(value, 0));
+    }
+    if (this.contactForm.form.contains('email') && !this.contactEmailSubscribe) {
+      this.contactEmailSubscribe = this.contactForm.form.get('email').valueChanges.subscribe((value) => this.onValueChanges(value, 1));
     }
   }
 
-  onSubmit() {
+  ngOnDestroy() {
+    this.contactNameSubscribe.unsubscribe();
+    this.contactEmailSubscribe.unsubscribe();
+  }
+
+  onValueChanges(value: string, input: number) {
+    switch (input) {
+      case 0:
+        this.contactName = (!this.checkModelErrors(this.contactForm.form.get('name'))) ? value : '';
+        break;
+      case 1:
+        this.contactEmail = (!this.checkModelErrors(this.contactForm.form.get('email'))) ? value : '';
+        break;
+    }
+    let contactMessageControl: AbstractControl = this.contactForm.form.get('message');
+    if (contactMessageControl && !contactMessageControl.touched) {
+      contactMessageControl.setValue('Hey Marcos!\nI just came to say hello!\n\nSincerely,\n' + this.contactName + '\n' + this.contactEmail);
+    }
+  }
+
+  onSubmit(values: Contact) {
     this.loading = true;
+    this.success = this.error = false;
     if (!isDevMode()) {
       this.googleAnalyticsEventsService.emitEvent('Forms', 'Submit', 'Contact');
+      this.contactService.sendContactMessage(values)
+        .subscribe(
+        response => {
+          this.loading = this.error = false;
+          this.success = true;
+          if (isDevMode()) {
+            console.log('Response Ok');
+          }
+          this.contactForm.reset();
+        },
+        error => {
+          this.loading = this.success = false;
+          this.error = true;
+          if (isDevMode()) {
+            console.log('Response error: ');
+            console.log(error);
+          }
+        },
+        () => {
+          this.loading = this.error = false;
+          this.success = true;
+          if (isDevMode()) {
+            console.log('Complete');
+          }
+          this.contactForm.reset();
+        }
+        );
+    } else {
+      this.loading = this.error = false;
+      this.success = true;
+      console.log('Test Ok');
+      this.contactForm.reset();
     }
-    this.contactService.sendContactMessage(this.contactForm.value)
-      .subscribe(
-      response => {
-        this.error = false;
-        this.loading = false;
-        if (isDevMode()) {
-          console.log('Response Ok');
-        }
-        this.contactForm.reset();
-      },
-      error => {
-        this.loading = false;
-        this.error = true;
-        if (isDevMode()) {
-          console.log('Response error: ');
-          console.log(error);
-        }
-      },
-      () => {
-        this.loading = false;
-        this.error = false;
-        if (isDevMode()) {
-          console.log('Complete');
-        }
-        this.contactForm.reset();
-      }
-      );
   }
 
   checkModelErrors(control: AbstractControl): boolean {
-    return (control.errors && (control.dirty || control.touched));
+    if (!control) {
+      return;
+    } else {
+      return (control.errors && (control.dirty || control.touched));
+    }
   }
 
   onClick(button: string) {

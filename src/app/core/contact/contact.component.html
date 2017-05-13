@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="col-md-4 offset-md-1 align-self-center">
-      <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <form (ngSubmit)="onSubmit(contactForm.value)" #contactForm="ngForm">
         <fieldset>
           <legend class="text-center">Contact me!</legend>
           <div *ngIf="error" class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -29,23 +29,28 @@
             </button>
             <strong>An error occurred!</strong> Please try again.
           </div>
+          <div *ngIf="success" class="alert alert-success alert-dismissible fade show" role="alert">
+            <button type="button" class="close" aria-label="Close" (click)="success = false">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Your message was sent!</strong> Thanks for contacting me.
+          </div>
           <div class="form-group">
             <label class="form-control-label" for="name">Name</label>
-            <input type="text" class="form-control" (input)="onValueChange($event)" placeholder="Name" id="name" name="contactName" [appBsFormControl]="contactName"
-              ngModel required #contactName="ngModel">
-            <div class="form-control-feedback" *ngIf="checkModelErrors(contactName)">Name is required!</div>
+            <input type="text" class="form-control" placeholder="Name" id="name" name="name" [bsFormControl]="contactName" required ngModel
+              #contactName="ngModel">
+            <div class="form-control-feedback" *ngIf="checkModelErrors(contactName)">Please enter your name!</div>
           </div>
           <div class="form-group">
             <label class="form-control-label" for="email">Email</label>
-            <input type="email" class="form-control" (input)="onValueChange($event)" placeholder="example@example.com" id="email" name="contactEmail"
-              [appBsFormControl]="contactEmail" ngModel required email #contactEmail="ngModel">
-            <div class="form-control-feedback" *ngIf="checkModelErrors(contactEmail) && contactEmail.errors.required">Please enter a Email!</div>
+            <input type="email" class="form-control" placeholder="example@example.com" id="email" name="email" [bsFormControl]="contactEmail"
+              required ngModel email #contactEmail="ngModel">
+            <div class="form-control-feedback" *ngIf="checkModelErrors(contactEmail) && contactEmail.errors.required">Please enter your Email!</div>
             <div class="form-control-feedback" *ngIf="checkModelErrors(contactEmail) && !contactEmail.errors.required && contactEmail.errors.email">Please enter a valid Email!</div>
           </div>
           <div class="form-group">
             <label class="form-control-label" for="message">Message</label>
-            <textarea class="form-control" [appBsFormControl]="contactMessage" rows="6" id="message" name="contactMessage" [(ngModel)]="contactMessage"
-              required></textarea>
+            <textarea class="form-control" [bsFormControl]="contactMessage" rows="6" id="message" name="message" required ngModel #contactMessage="ngModel"></textarea>
           </div>
         </fieldset>
         <input class="btn btn-default" type="submit" value="Submit" [disabled]="!contactForm.valid">

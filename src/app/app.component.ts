@@ -1,7 +1,7 @@
 /// <reference path="../../node_modules/@types/google.analytics/index.d.ts" />
 
 import { Component, isDevMode } from '@angular/core';
-import { Router, NavigationEnd } from "@angular/router";
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
