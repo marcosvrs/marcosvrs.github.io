@@ -21,8 +21,10 @@ export class BsFormControlDirective {
     this.handleClasses();
   }
 
-  @HostListener('reset') onReset() {
-    this.handleClasses();
+  @HostListener('ngModelChange', ['$event']) onModelChange(value: any) {
+    if (!value) {
+      this.handleClasses();
+    }
   }
 
   private handleClasses(): void {

@@ -16,5 +16,15 @@
       "es2016",
       "dom"
     ]
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "functions",
+    "src/**/*.spec.ts",
+    "src/**/*.e2e.ts"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "./src/locale"
   }
 }

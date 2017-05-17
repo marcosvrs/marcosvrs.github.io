@@ -1,6 +1,11 @@
 @import '~_variables.scss';
 @import '~bootstrap/scss/_variables.scss';
+#code {
+    margin-top: -24px;
+}
+
 .board {
+    padding: 10px;
     &:hover,
     &:focus {
         background: $gray-lighter;
@@ -17,13 +22,13 @@
 }
 
 #code {
-    background-image: url('/assets/code.png');
+    background-image: url('/assets/code.jpg');
 }
 
 #phone {
-    background-image: url('/assets/phone.png');
+    background-image: url('/assets/phone.jpg');
 }
 
 #tablet {
-    background-image: url('/assets/tablet.png');
+    background-image: url('/assets/tablet.jpg');
 }
