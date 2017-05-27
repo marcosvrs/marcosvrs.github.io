@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseListObservable } from 'angularfire2/database';
 
 import { Testimonial } from 'app/models/testimonial.model';
 import { TestimonialService } from 'app/services/testimonial.service';
@@ -10,7 +9,7 @@ import { TestimonialService } from 'app/services/testimonial.service';
   styleUrls: ['./testimonials.component.scss']
 })
 export class TestimonialsComponent implements OnInit {
-  testimonials: FirebaseListObservable<Testimonial[]>;
+  testimonials; //: Testimonial[];
   showAddTestimonialModal: boolean = false;
 
   constructor(private testimonialService: TestimonialService) { }

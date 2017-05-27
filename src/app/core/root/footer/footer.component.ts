@@ -1,5 +1,5 @@
-import { Component, isDevMode } from '@angular/core';
-import { GoogleAnalyticsEventsService } from 'app/services/google-analytics-events.service';
+import { Component } from '@angular/core';
+import { GoogleAnalyticsService } from 'app/services/google-analytics-events.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,12 +8,10 @@ import { GoogleAnalyticsEventsService } from 'app/services/google-analytics-even
 })
 export class FooterComponent {
 
-  constructor(private googleAnalyticsEventsService: GoogleAnalyticsEventsService) { }
+  constructor(private googleAnalyticsEventsService: GoogleAnalyticsService) { }
 
   onClick(button: string) {
-    if (!isDevMode()) {
-      this.googleAnalyticsEventsService.emitEvent('Buttons', 'Click', button);
-    }
+    this.googleAnalyticsEventsService.emitEvent('Buttons', 'Click', button);
   }
 
 }

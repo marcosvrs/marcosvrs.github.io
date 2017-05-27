@@ -1,16 +1,17 @@
 import { Injectable, isDevMode } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 
-import firebaseConfig from 'app/firebase.config.json';
+import { FirebaseService } from 'app/services/firebase.service';
 import { Contact } from 'app/models/contact.model';
 
 @Injectable()
 export class ContactService {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private firebase: FirebaseService) { }
 
   public sendContactMessage(message: Contact) {
-    const url = 'https://us-central1-' + firebaseConfig.projectId + '.cloudfunctions.net/sendMessage';
+    console.log(this.firebase.app.name);
+    let url = this.firebase.app.name + 'API/sendMessage';
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     if (isDevMode()) {

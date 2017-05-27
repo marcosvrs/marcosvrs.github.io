@@ -4,7 +4,7 @@ import { NgForm, NgModel, AbstractControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs/Subscription';
 import { Contact } from 'app/models/contact.model';
 import { ContactService } from 'app/services/contact.service';
-import { GoogleAnalyticsEventsService } from 'app/services/google-analytics-events.service';
+import { GoogleAnalyticsService } from 'app/services/google-analytics-events.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,19 +13,24 @@ import { GoogleAnalyticsEventsService } from 'app/services/google-analytics-even
   },
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
-  providers: [ContactService, GoogleAnalyticsEventsService]
+  providers: [ContactService, GoogleAnalyticsService]
 })
 export class ContactComponent implements AfterViewChecked, OnDestroy {
+  /** Binding */
   @ViewChild('contactForm') contactForm: NgForm;
-  loading: boolean = false;
-  error: boolean = false;
-  success: boolean = false;
-  contactNameSubscribe: Subscription;
-  contactEmailSubscribe: Subscription;
   contactName: string = '';
   contactEmail: string = '';
 
-  constructor(private contactService: ContactService, private googleAnalyticsEventsService: GoogleAnalyticsEventsService) { }
+  /** Auxiliary variables for state */
+  loading: boolean = false;
+  error: boolean = false;
+  success: boolean = false;
+
+  /** Auxiliary variables for Subscriptions */
+  contactNameSubscribe: Subscription;
+  contactEmailSubscribe: Subscription;
+
+  constructor(private contactService: ContactService, private googleAnalyticsEventsService: GoogleAnalyticsService) { }
 
   ngAfterViewChecked() {
     if (this.contactForm.form.contains('name') && !this.contactNameSubscribe) {
@@ -59,41 +64,34 @@ export class ContactComponent implements AfterViewChecked, OnDestroy {
   onSubmit(values: Contact) {
     this.loading = true;
     this.success = this.error = false;
-    if (!isDevMode()) {
-      this.googleAnalyticsEventsService.emitEvent('Forms', 'Submit', 'Contact');
-      this.contactService.sendContactMessage(values)
-        .subscribe(
-        response => {
-          this.loading = this.error = false;
-          this.success = true;
-          if (isDevMode()) {
-            console.log('Response Ok');
-          }
-          this.contactForm.reset();
-        },
-        error => {
-          this.loading = this.success = false;
-          this.error = true;
-          if (isDevMode()) {
-            console.log('Response error: ');
-            console.log(error);
-          }
-        },
-        () => {
-          this.loading = this.error = false;
-          this.success = true;
-          if (isDevMode()) {
-            console.log('Complete');
-          }
-          this.contactForm.reset();
+    this.googleAnalyticsEventsService.emitEvent('Forms', 'Submit', 'Contact');
+    this.contactService.sendContactMessage(values)
+      .subscribe(
+      response => {
+        this.loading = this.error = false;
+        this.success = true;
+        if (isDevMode()) {
+          console.log('Response Ok');
         }
-        );
-    } else {
-      this.loading = this.error = false;
-      this.success = true;
-      console.log('Test Ok');
-      this.contactForm.reset();
-    }
+        this.contactForm.reset();
+      },
+      error => {
+        this.loading = this.success = false;
+        this.error = true;
+        if (isDevMode()) {
+          console.log('Response error: ');
+          console.log(error);
+        }
+      },
+      () => {
+        this.loading = this.error = false;
+        this.success = true;
+        if (isDevMode()) {
+          console.log('Complete');
+        }
+        this.contactForm.reset();
+      }
+      );
   }
 
   checkModelErrors(control: AbstractControl): boolean {
@@ -105,8 +103,6 @@ export class ContactComponent implements AfterViewChecked, OnDestroy {
   }
 
   onClick(button: string) {
-    if (!isDevMode()) {
-      this.googleAnalyticsEventsService.emitEvent('Buttons', 'Click', button);
-    }
+    this.googleAnalyticsEventsService.emitEvent('Buttons', 'Click', button);
   }
 }

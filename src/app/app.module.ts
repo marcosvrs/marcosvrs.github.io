@@ -8,7 +8,8 @@ import { CoreModule } from 'app/core/core.module';
 import { AppComponent } from 'app/app.component';
 import { TestimonialsModule } from 'app/testimonials/testimonials.module';
 import { DirectivesModule } from 'app/directives/directives.module';
-import { GoogleAnalyticsEventsService } from 'app/services/google-analytics-events.service';
+import { GoogleAnalyticsService } from 'app/services/google-analytics-events.service';
+import { FirebaseService } from 'app/services/firebase.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { GoogleAnalyticsEventsService } from 'app/services/google-analytics-even
     TestimonialsModule,
     DirectivesModule
   ],
-  providers: [GoogleAnalyticsEventsService],
+  providers: [GoogleAnalyticsService, FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

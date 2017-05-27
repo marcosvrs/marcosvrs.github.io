@@ -1,16 +1,16 @@
 import { Injectable, isDevMode } from '@angular/core';
-import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 
+import { FirebaseService } from 'app/services/firebase.service';
 import { Testimonial } from 'app/models/testimonial.model';
 
 @Injectable()
 export class TestimonialService {
 
-  constructor(private db: AngularFireDatabase) {
+  constructor(private firebase: FirebaseService) {
   }
 
-  getTestimonials(): FirebaseListObservable<Testimonial[]> {
-    return this.db.list('testimonials');
+  getTestimonials(): firebase.database.Reference {
+    return this.firebase.app.database().ref('testimonials');
   }
 
   addTestimonial(testimonial: Testimonial) {
