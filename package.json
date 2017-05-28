@@ -5,8 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --sourcemap --aot",
-    "build": "ng build --aot",
-    "build:prod": "ng build --prod --aot",
+    "build": "ng build --aot && firebase deploy --project develop",
+    "build:prod": "ng build --prod --aot && firebase deploy --project default",
     "build:en": "ng build --aot --output-path dist/en --base-href en --locale en --i18n-format xlf --i18n-file src/locale/messages.en.xlf",
     "build:pt-BR": "ng build --aot --output-path dist/pt-BR --base-href pt-BR --locale pt-BR --i18n-format xlf --i18n-file src/locale/messages.pt-BR.xlf",
     "build:de": "ng build --aot --output-path dist/de --base-href de --locale de --i18n-format xlf --i18n-file src/locale/messages.de.xlf",
