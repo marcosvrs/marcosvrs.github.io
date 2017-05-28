@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "marcosvrs-bc41d"
+    "default": "marcosvrs-bc41d",
+    "develop": "marcosvrs-development"
   }
 }
