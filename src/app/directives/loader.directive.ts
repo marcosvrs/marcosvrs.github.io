@@ -219,6 +219,9 @@ export class LoaderDirective implements OnInit {
          */
         this.re.setStyle(elem, 'min-height', '0');
 
+        /** Set text-align center */
+        this.re.setStyle(elem, 'text-align', 'center');
+
         /** Add the loading element as a child */
         this.re.appendChild(elem, this.createElement('i', this.loadClass));
 
@@ -230,6 +233,7 @@ export class LoaderDirective implements OnInit {
            * @custom
            */
           this.re.removeStyle(elem, 'min-height');
+          this.re.removeStyle(elem, 'text-align');
           this.re.removeChild(elem, elem.lastChild);
         }, true);
 
