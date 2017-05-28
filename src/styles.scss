@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'variables';
+@import '~bootstrap/scss/bootstrap';
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome';
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    //padding-bottom: $icon-size;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    overflow-x: hidden;
+}
+
+router-outlet {
+    display: none;
+}
+
+.icon {
+    height: $icon-size;
+    width: $icon-size;
+}
+
+.parallax {
+    background: no-repeat fixed center;
+    background-size: cover;
+    min-height: 50vh;
+}

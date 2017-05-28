@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="en">
+    <body>
+      <trans-unit id="6ee383d769fbb03f59cbeda57841a618c364a81c" datatype="html">
+        <source>Hi, my name is Marcos Vinícius!</source>
+        <target>Hi, my name is Marcos Vinícius!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/home/home.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9073c00c3cefb9c75003dc41f34acc8314519aaf" datatype="html">
+        <source>You can get to know me by browsing my website.</source>
+        <target>You can get to know me by browsing my website.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/home/home.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1a77691e81413194a1ef06655e1694b00f1f727c" datatype="html">
+        <source>Fell free to <x id="START_LINK" ctype="x-a"/>contact<x id="CLOSE_LINK" ctype="x-a"/> me and give me feedback.</source>
+        <target>Fell free to &lt;x id="START_LINK" ctype="x-a"/&gt;contact&lt;x id="CLOSE_LINK" ctype="x-a"/&gt; me and give me feedback.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/home/home.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b13e3bcc1e5673dc813862671a99c046d35b00a8" datatype="html">
+        <source>TECHNOLOGIES</source>
+        <target>TECHNOLOGIES</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/resume/resume.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5ab30d8e93298504d7dc4f79ae9a6f0173633e76" datatype="html">
+        <source>
+        <x id="START_HEADING_LEVEL4" ctype="x-h4"/>Comfortable with<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/>
+        <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="START_LIST_ITEM" ctype="x-li"/>Web Development
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>HTML[5] / CSS[3]<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>LESS / SCSS (SASS)<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Bootstrap Framework<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Responsive Layout and Design<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>PHP<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Email Marketing
+                <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+                  <x id="START_LIST_ITEM" ctype="x-li"/>Foundation<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+                <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+          <x id="START_LIST_ITEM" ctype="x-li"/>Desktop Development
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>C# (.NET)<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+          <x id="START_LIST_ITEM" ctype="x-li"/>Database
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>MySQL<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+          <x id="START_LIST_ITEM" ctype="x-li"/>Version Control (GIT)<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+        <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+      </source>
+        <target>
+        &lt;x id="START_HEADING_LEVEL4" ctype="x-h4"/&gt;Comfortable with&lt;x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/&gt;
+        &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Web Development
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;HTML[5] / CSS[3]&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;LESS / SCSS (SASS)&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Bootstrap Framework&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Responsive Layout and Design&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;PHP&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Email Marketing
+                &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+                  &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Foundation&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+                &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+          &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Desktop Development
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;C# (.NET)&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+          &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Database
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;MySQL&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+          &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Version Control (GIT)&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+        &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/resume/resume.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e7d8fe8ba5dbe8011ff8ae4d14404326272ae91b" datatype="html">
+        <source>
+        <x id="START_HEADING_LEVEL4" ctype="x-h4"/>Experienced in<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/>
+        <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="START_LIST_ITEM" ctype="x-li"/>Web Development
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>MDL Framework<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Javascript<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>jQuery<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>ASP.NET<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+          <x id="START_LIST_ITEM" ctype="x-li"/>Desktop Development
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Java<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>C++<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+          <x id="START_LIST_ITEM" ctype="x-li"/>Database
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Oracle<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+          <x id="START_LIST_ITEM" ctype="x-li"/>Others
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Objective C (Arduino)<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+        <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+      </source>
+        <target>
+        &lt;x id="START_HEADING_LEVEL4" ctype="x-h4"/&gt;Experienced in&lt;x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/&gt;
+        &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Web Development
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;MDL Framework&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Javascript&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;jQuery&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;ASP.NET&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+          &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Desktop Development
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Java&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;C++&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+          &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Database
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Oracle&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+          &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Others
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Objective C (Arduino)&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+        &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/resume/resume.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="81501bb8a2d0a81d12c5457a135921bfd9c1304c" datatype="html">
+        <source>
+        <x id="START_HEADING_LEVEL4" ctype="x-h4"/>Interested in<x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/>
+        <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="START_LIST_ITEM" ctype="x-li"/>Frontend Development
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Typescript<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Angular (4)<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Bootstrap Framework<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+          <x id="START_LIST_ITEM" ctype="x-li"/>Database
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>NoSQL<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+        <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+      </source>
+        <target>
+        &lt;x id="START_HEADING_LEVEL4" ctype="x-h4"/&gt;Interested in&lt;x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/&gt;
+        &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Frontend Development
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Typescript&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Angular (4)&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Bootstrap Framework&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+          &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Database
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;NoSQL&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+        &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/resume/resume.component.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="89c959121340881c205594a9e3e35459d4cc3664" datatype="html">
+        <source>WORK EXPERIENCE</source>
+        <target>WORK EXPERIENCE</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/resume/resume.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c3eff8b69b3da3a0a2d46d0b26b711182b48163e" datatype="html">
+        <source>
+            <x id="START_HEADING_LEVEL4" ctype="x-h4"/>System Analyst <x id="START_SMALL_TEXT" ctype="x-small"/>Rodrimar Port Terminals<x id="CLOSE_SMALL_TEXT" ctype="x-small"/><x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/>
+            <x id="START_PARAGRAPH" ctype="x-p"/>July, 2015 - December, 2016<x id="CLOSE_PARAGRAPH" ctype="x-p"/>
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Support for ERP TOTVS Logix System for Human Resources, Logistic, Finance and Accounting processes;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Sharepoint Server and Reporting Services Management;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Linux and Windows Server Management for Applications;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Oracle and MySQL Database Supervisor;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Auxiliary systems Development (PHP [Web] and Java [Desktop]);<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Managing and Developing E-mail marketing with Foundation Framework;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          </source>
+        <target>
+            &lt;x id="START_HEADING_LEVEL4" ctype="x-h4"/&gt;System Analyst &lt;x id="START_SMALL_TEXT" ctype="x-small"/&gt;Rodrimar Port Terminals&lt;x id="CLOSE_SMALL_TEXT" ctype="x-small"/&gt;&lt;x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/&gt;
+            &lt;x id="START_PARAGRAPH" ctype="x-p"/&gt;July, 2015 - December, 2016&lt;x id="CLOSE_PARAGRAPH" ctype="x-p"/&gt;
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Support for ERP TOTVS Logix System for Human Resources, Logistic, Finance and Accounting processes;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Sharepoint Server and Reporting Services Management;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Linux and Windows Server Management for Applications;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Oracle and MySQL Database Supervisor;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Auxiliary systems Development (PHP [Web] and Java [Desktop]);&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Managing and Developing E-mail marketing with Foundation Framework;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/resume/resume.component.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fd97c14a06190306dac2fb1e4f1b236f46283103" datatype="html">
+        <source>
+            <x id="START_HEADING_LEVEL4" ctype="x-h4"/>C# for WEB (ASP.NET) Developer <x id="START_SMALL_TEXT" ctype="x-small"/>Free Lancer<x id="CLOSE_SMALL_TEXT" ctype="x-small"/><x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/>
+            <x id="START_PARAGRAPH" ctype="x-p"/>January, 2016 - July, 2016<x id="CLOSE_PARAGRAPH" ctype="x-p"/>
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Developer for web project in ASP.NET (jQuery, HTML) and C# for Web;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          </source>
+        <target>
+            &lt;x id="START_HEADING_LEVEL4" ctype="x-h4"/&gt;C# for WEB (ASP.NET) Developer &lt;x id="START_SMALL_TEXT" ctype="x-small"/&gt;Free Lancer&lt;x id="CLOSE_SMALL_TEXT" ctype="x-small"/&gt;&lt;x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/&gt;
+            &lt;x id="START_PARAGRAPH" ctype="x-p"/&gt;January, 2016 - July, 2016&lt;x id="CLOSE_PARAGRAPH" ctype="x-p"/&gt;
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Developer for web project in ASP.NET (jQuery, HTML) and C# for Web;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/resume/resume.component.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c8cf264ca9c9a86116605c887c876a2ffd4f2466" datatype="html">
+        <source>
+            <x id="START_HEADING_LEVEL4" ctype="x-h4"/>Technical Support Analyst <x id="START_SMALL_TEXT" ctype="x-small"/>Rodrimar Port Terminals<x id="CLOSE_SMALL_TEXT" ctype="x-small"/><x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/>
+            <x id="START_PARAGRAPH" ctype="x-p"/>February, 2014 - July, 2015<x id="CLOSE_PARAGRAPH" ctype="x-p"/>
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Network and Infrastructure projects Supervisor;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Ruckus Wireless system administrator;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Windows and Digifort (IP Surveillance System) servers administrator;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Contracts Supervisor for IT Infrastructure, CCTV and LPR/OCR Maintenance;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Help Desk;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          </source>
+        <target>
+            &lt;x id="START_HEADING_LEVEL4" ctype="x-h4"/&gt;Technical Support Analyst &lt;x id="START_SMALL_TEXT" ctype="x-small"/&gt;Rodrimar Port Terminals&lt;x id="CLOSE_SMALL_TEXT" ctype="x-small"/&gt;&lt;x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/&gt;
+            &lt;x id="START_PARAGRAPH" ctype="x-p"/&gt;February, 2014 - July, 2015&lt;x id="CLOSE_PARAGRAPH" ctype="x-p"/&gt;
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Network and Infrastructure projects Supervisor;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Ruckus Wireless system administrator;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Windows and Digifort (IP Surveillance System) servers administrator;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Contracts Supervisor for IT Infrastructure, CCTV and LPR/OCR Maintenance;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Help Desk;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/resume/resume.component.ts</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aaf5b9b4ca6339c5f3c9c17e052fa247c210977a" datatype="html">
+        <source>
+            <x id="START_HEADING_LEVEL4" ctype="x-h4"/>Intern <x id="START_SMALL_TEXT" ctype="x-small"/>Rodrimar Port Terminals<x id="CLOSE_SMALL_TEXT" ctype="x-small"/><x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/>
+            <x id="START_PARAGRAPH" ctype="x-p"/>February, 2012 - February, 2014<x id="CLOSE_PARAGRAPH" ctype="x-p"/>
+            <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Help Desk Monitoring;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Monitoring the Network, Desktop and Devices Support;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+              <x id="START_LIST_ITEM" ctype="x-li"/>Monitoring the management of IT contracts;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+            <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+          </source>
+        <target>
+            &lt;x id="START_HEADING_LEVEL4" ctype="x-h4"/&gt;Intern &lt;x id="START_SMALL_TEXT" ctype="x-small"/&gt;Rodrimar Port Terminals&lt;x id="CLOSE_SMALL_TEXT" ctype="x-small"/&gt;&lt;x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/&gt;
+            &lt;x id="START_PARAGRAPH" ctype="x-p"/&gt;February, 2012 - February, 2014&lt;x id="CLOSE_PARAGRAPH" ctype="x-p"/&gt;
+            &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Help Desk Monitoring;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Monitoring the Network, Desktop and Devices Support;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+              &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Monitoring the management of IT contracts;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+            &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+          </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/resume/resume.component.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e118a75b03abbf65bf6a9c3fcb5fe1e8b82dc72b" datatype="html">
+        <source>EDUCATION</source>
+        <target>EDUCATION</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/resume/resume.component.ts</context>
+          <context context-type="linenumber">146</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="af5d7dc3e99712291d6c511bfcecb1a64475cae8" datatype="html">
+        <source>
+        <x id="START_HEADING_LEVEL4" ctype="x-h4"/>COMPUTER ENGINEERING GRADUATION <x id="START_SMALL_TEXT" ctype="x-small"/>Santa Cecília University - Santos, SP, Brazil<x id="CLOSE_SMALL_TEXT" ctype="x-small"/><x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/>
+        <x id="START_PARAGRAPH" ctype="x-p"/>February, 2011 - December, 2015<x id="CLOSE_PARAGRAPH" ctype="x-p"/>
+        <x id="START_UNORDERED_LIST" ctype="x-ul"/>
+          <x id="START_LIST_ITEM" ctype="x-li"/>C++; C# (.NET) for Desktop; Objective C (Arduino);<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+          <x id="START_LIST_ITEM" ctype="x-li"/>Knowledge about Digital Communication, Electronic Components (Integrated Circuits), Network Infrastructure, Automation,
+            Computer Architecture;<x id="CLOSE_LIST_ITEM" ctype="x-li"/>
+        <x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/>
+      </source>
+        <target>
+        &lt;x id="START_HEADING_LEVEL4" ctype="x-h4"/&gt;COMPUTER ENGINEERING GRADUATION &lt;x id="START_SMALL_TEXT" ctype="x-small"/&gt;Santa Cecília University - Santos, SP, Brazil&lt;x id="CLOSE_SMALL_TEXT" ctype="x-small"/&gt;&lt;x id="CLOSE_HEADING_LEVEL4" ctype="x-h4"/&gt;
+        &lt;x id="START_PARAGRAPH" ctype="x-p"/&gt;February, 2011 - December, 2015&lt;x id="CLOSE_PARAGRAPH" ctype="x-p"/&gt;
+        &lt;x id="START_UNORDERED_LIST" ctype="x-ul"/&gt;
+          &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;C++; C# (.NET) for Desktop; Objective C (Arduino);&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+          &lt;x id="START_LIST_ITEM" ctype="x-li"/&gt;Knowledge about Digital Communication, Electronic Components (Integrated Circuits), Network Infrastructure, Automation,
+            Computer Architecture;&lt;x id="CLOSE_LIST_ITEM" ctype="x-li"/&gt;
+        &lt;x id="CLOSE_UNORDERED_LIST" ctype="x-ul"/&gt;
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/resume/resume.component.ts</context>
+          <context context-type="linenumber">148</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="60d9d6640cfd601d9fb6236baa4419ed15b49926" datatype="html">
+        <source>Profile Picture</source>
+        <target>Profile Picture</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/about/about.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/about/about.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="25cf970f34b707f3c004a5214216fd1570089b9c" datatype="html">
+        <source>
+        <x id="START_HEADING_LEVEL1" ctype="x-h1"/>Interesting facts!<x id="CLOSE_HEADING_LEVEL1" ctype="x-h1"/>
+        <x id="START_PARAGRAPH" ctype="x-p"/>I am a Brazilian graduated Computer Engineer. I love <x id="START_LINK" ctype="x-a"/>coding<x id="CLOSE_LINK" ctype="x-a"/>,
+          playing guitar and Brazil. I also LOVE coffee. I knew my vocation since I was 14 years old.<x id="CLOSE_PARAGRAPH" ctype="x-p"/>
+        <x id="START_PARAGRAPH" ctype="x-p"/>At my time at the <x id="START_LINK_1" ctype="x-a"/>University<x id="CLOSE_LINK" ctype="x-a"/>, I collaborated in an international
+          project called
+          <x id="START_LINK_2" ctype="x-a"/>Butterfly<x id="CLOSE_LINK" ctype="x-a"/> that became my Term paper at the end of the course.
+        <x id="CLOSE_PARAGRAPH" ctype="x-p"/>
+        <x id="START_PARAGRAPH" ctype="x-p"/>After 5 years working at <x id="START_LINK_3" ctype="x-a"/>Rodrimar<x id="CLOSE_LINK" ctype="x-a"/>, I had 3 different positions:
+          IT-Internship, Technical Support Analyst and System Analyst. During my time in there I was able to gaining a wide
+          knowledge that I consider decisive.<x id="CLOSE_PARAGRAPH" ctype="x-p"/>
+        <x id="START_PARAGRAPH" ctype="x-p"/>At this moment, I&apos;m based in Hamburg learning German and studying to stay up to date with the latest programming languages
+          and trying to increment my working experience in another country.<x id="CLOSE_PARAGRAPH" ctype="x-p"/>
+      </source>
+        <target>
+        &lt;x id="START_HEADING_LEVEL1" ctype="x-h1"/&gt;Interesting facts!&lt;x id="CLOSE_HEADING_LEVEL1" ctype="x-h1"/&gt;
+        &lt;x id="START_PARAGRAPH" ctype="x-p"/&gt;I am a Brazilian graduated Computer Engineer. I love &lt;x id="START_LINK" ctype="x-a"/&gt;coding&lt;x id="CLOSE_LINK" ctype="x-a"/&gt;,
+          playing guitar and Brazil. I also LOVE coffee. I knew my vocation since I was 14 years old.&lt;x id="CLOSE_PARAGRAPH" ctype="x-p"/&gt;
+        &lt;x id="START_PARAGRAPH" ctype="x-p"/&gt;At my time at the &lt;x id="START_LINK_1" ctype="x-a"/&gt;University&lt;x id="CLOSE_LINK" ctype="x-a"/&gt;, I collaborated in an international
+          project called
+          &lt;x id="START_LINK_2" ctype="x-a"/&gt;Butterfly&lt;x id="CLOSE_LINK" ctype="x-a"/&gt; that became my Term paper at the end of the course.
+        &lt;x id="CLOSE_PARAGRAPH" ctype="x-p"/&gt;
+        &lt;x id="START_PARAGRAPH" ctype="x-p"/&gt;After 5 years working at &lt;x id="START_LINK_3" ctype="x-a"/&gt;Rodrimar&lt;x id="CLOSE_LINK" ctype="x-a"/&gt;, I had 3 different positions:
+          IT-Internship, Technical Support Analyst and System Analyst. During my time in there I was able to gaining a wide
+          knowledge that I consider decisive.&lt;x id="CLOSE_PARAGRAPH" ctype="x-p"/&gt;
+        &lt;x id="START_PARAGRAPH" ctype="x-p"/&gt;At this moment, I&apos;m based in Hamburg learning German and studying to stay up to date with the latest programming languages
+          and trying to increment my working experience in another country.&lt;x id="CLOSE_PARAGRAPH" ctype="x-p"/&gt;
+      </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/about/about.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e0f1c78f58aefd814977020c4e8e18381736728f" datatype="html">
+        <source>
+          <x id="START_PARAGRAPH" ctype="x-p"/>You can send me a email directly for:<x id="CLOSE_PARAGRAPH" ctype="x-p"/>
+          <x id="START_PARAGRAPH" ctype="x-p"/>marcosauda@outlook.com<x id="CLOSE_PARAGRAPH" ctype="x-p"/>
+        </source>
+        <target>
+          &lt;x id="START_PARAGRAPH" ctype="x-p"/&gt;You can send me a email directly for:&lt;x id="CLOSE_PARAGRAPH" ctype="x-p"/&gt;
+          &lt;x id="START_PARAGRAPH" ctype="x-p"/&gt;marcosauda@outlook.com&lt;x id="CLOSE_PARAGRAPH" ctype="x-p"/&gt;
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e86598883446f1483956bc4437f0cf45b46f0459" datatype="html">
+        <source>Or contact me in my social medias:</source>
+        <target>Or contact me in my social medias:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bb9d0dd7732ed99193d62d915cbd68be2c83f8db" datatype="html">
+        <source>Contact me!</source>
+        <target>Contact me!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="157209cfaee0bbd21e14507fd8fa19eb792c4b3e" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong"/>An error occurred!<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> Please try again.</source>
+        <target>&lt;x id="START_TAG_STRONG" ctype="x-strong"/&gt;An error occurred!&lt;x id="CLOSE_TAG_STRONG" ctype="x-strong"/&gt; Please try again.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="61b9ee64c00b21851e9b984677805f19cabf9bf4" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong"/>Your message was sent!<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> Thanks for contacting me.</source>
+        <target>&lt;x id="START_TAG_STRONG" ctype="x-strong"/&gt;Your message was sent!&lt;x id="CLOSE_TAG_STRONG" ctype="x-strong"/&gt; Thanks for contacting me.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
+        <source>Name</source>
+        <target>Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a27926012d41aaca008a0671c4d4f652ba9412cc" datatype="html">
+        <source>Please enter your name!</source>
+        <target>Please enter your name!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="244aae9346da82b0922506c2d2581373a15641cc" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/footer/footer.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7373d05d9d32dda8bf10fc349cb83a60487d5231" datatype="html">
+        <source>example@example.com</source>
+        <target>example@example.com</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2d1f84655cd63b79f4bfd7b01bef48ea35b29739" datatype="html">
+        <source>Please enter your Email!</source>
+        <target>Please enter your Email!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="913f07171b4389cf19c15dd21055a563fd2055f4" datatype="html">
+        <source>Please enter a valid Email!</source>
+        <target>Please enter a valid Email!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ccac601bf473fa28c9ac46794f1cd40542f74347" datatype="html">
+        <source>Message</source>
+        <target>Message</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="71c77bb8cecdf11ec3eead24dd1ba506573fa9cd" datatype="html">
+        <source>Submit</source>
+        <target>Submit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/contact/contact.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
+        <source>Home</source>
+        <target>Home</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/navbar/navbar.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4cd979821c89535df23df1c8ac8f260673610d90" datatype="html">
+        <source>Resume</source>
+        <target>Resume</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/navbar/navbar.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="004b222ff9ef9dd4771b777950ca1d0e4cd4348a" datatype="html">
+        <source>About</source>
+        <target>About</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/navbar/navbar.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="34746fb1c7f3d2194d99652bdff89e6e14c9c4f4" datatype="html">
+        <source>Contact</source>
+        <target>Contact</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/navbar/navbar.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="71fd373e1435b80183a5419e38c300ac3b79bfb5" datatype="html">
+        <source>View Code</source>
+        <target>View Code</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/Apps/marcosvrs.github.io/src/app/core/root/footer/footer.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
