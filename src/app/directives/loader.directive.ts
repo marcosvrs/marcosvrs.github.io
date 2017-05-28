@@ -55,7 +55,7 @@ export class LoaderDirective implements OnInit {
         img.addEventListener('load', () => {
 
           if (isDevMode()) {
-            console.log(elem);
+            console.log(elem.lastChild);
           }
           /**
            * Then remove the loading child element and
@@ -92,115 +92,115 @@ export class LoaderDirective implements OnInit {
         elem.src = elem.alt = '';
 
         /** Check if it's a Video element */
-      } else if (elem instanceof HTMLMediaElement) {
+        // } else if (elem instanceof HTMLMediaElement) {
 
-        /** Check if the parent element is a Div */
-        if (elem.parentElement instanceof HTMLDivElement) {
+        //   /** Check if the parent element is a Div */
+        //   if (elem.parentElement instanceof HTMLDivElement) {
 
-          /** Then add the loading element as a child of the parent element */
-          this.re.appendChild(elem.parentElement, this.createElement('i', this.loadClass));
-        }
+        //     /** Then add the loading element as a child of the parent element */
+        //     this.re.appendChild(elem.parentElement, this.createElement('i', this.loadClass));
+        //   }
 
-        /** Check if the video element has a src attribute */
-        if (elem.src) {
+        //   /** Check if the video element has a src attribute */
+        //   if (elem.src) {
 
-          /** Create another element to load the video in background */
-          let media: HTMLMediaElement = <HTMLMediaElement>document.createElement(elem.tagName);
+        //     /** Create another element to load the video in background */
+        //     let media: HTMLMediaElement = <HTMLMediaElement>document.createElement(elem.tagName);
 
-          /** Listen when the video is already loaded */
-          media.addEventListener('loadeddata', () => {
+        //     /** Listen when the video is already loaded */
+        //     media.addEventListener('loadeddata', () => {
 
-            /**
-             * Then remove the loading element and
-             * set the original source path again
-             */
-            this.re.removeChild(elem, elem.lastChild);
-            if (elem.parentElement instanceof HTMLDivElement) {
-              this.re.removeChild(elem.parentElement, elem.parentElement.lastChild);
-            }
-            elem.src = media.src;
-          }, true);
+        //       /**
+        //        * Then remove the loading element and
+        //        * set the original source path again
+        //        */
+        //       this.re.removeChild(elem, elem.lastChild);
+        //       if (elem.parentElement instanceof HTMLDivElement) {
+        //         this.re.removeChild(elem.parentElement, elem.parentElement.lastChild);
+        //       }
+        //       elem.src = media.src;
+        //     }, true);
 
-          if (this.error) {
+        //     if (this.error) {
 
-            /** Listen when the video failed to load */
-            media.addEventListener('error', () => {
+        //       /** Listen when the video failed to load */
+        //       media.addEventListener('error', () => {
 
-              /**
-               * Then remove the loading element and
-               * add the error element and
-               * the original source path again
-               */
-              this.re.removeChild(elem, elem.lastChild);
-              if (elem.parentElement instanceof HTMLDivElement) {
-                this.re.removeChild(elem.parentElement, elem.parentElement.lastChild);
-                this.re.appendChild(elem.parentElement, this.createElement('i', this.errorClass));
-              }
-              elem.src = media.src;
-            }, true);
-          }
+        //         /**
+        //          * Then remove the loading element and
+        //          * add the error element and
+        //          * the original source path again
+        //          */
+        //         this.re.removeChild(elem, elem.lastChild);
+        //         if (elem.parentElement instanceof HTMLDivElement) {
+        //           this.re.removeChild(elem.parentElement, elem.parentElement.lastChild);
+        //           this.re.appendChild(elem.parentElement, this.createElement('i', this.errorClass));
+        //         }
+        //         elem.src = media.src;
+        //       }, true);
+        //     }
 
-          /**
-           * Then clear the source path and
-           * include it in other element while it's loading
-           */
-          media.src = elem.src;
-          elem.src = '';
+        //     /**
+        //      * Then clear the source path and
+        //      * include it in other element while it's loading
+        //      */
+        //     media.src = elem.src;
+        //     elem.src = '';
 
-          /**
-           * Otherwise check if the video element has childrens element.
-           * Because it can have the source element.
-           */
-        } else if (elem.children) {
+        //     /**
+        //      * Otherwise check if the video element has childrens element.
+        //      * Because it can have the source element.
+        //      */
+        //   } else if (elem.children) {
 
-          /** Then iterate over the childrens elements of the video element */
-          Array.from(elem.children).forEach((item) => {
+        //     /** Then iterate over the childrens elements of the video element */
+        //     Array.from(elem.children).forEach((item) => {
 
-            /** Check if haves the source element */
-            if (item instanceof HTMLSourceElement) {
+        //       /** Check if haves the source element */
+        //       if (item instanceof HTMLSourceElement) {
 
-              /** Create another element to load the video in background */
-              let media = this.createElement(elem.tagName);
+        //         /** Create another element to load the video in background */
+        //         let media = this.createElement(elem.tagName);
 
-              /** Listen when the video is already loaded */
-              media.addEventListener('loadeddata', () => {
+        //         /** Listen when the video is already loaded */
+        //         media.addEventListener('loadeddata', () => {
 
-                /**
-                 * Then remove the loading element and
-                 * set the original source path again
-                 */
-                this.re.removeChild(elem, elem.lastChild);
-                if (elem.parentElement instanceof HTMLDivElement) {
-                  this.re.removeChild(elem.parentElement, elem.parentElement.lastChild);
-                }
-                item.src = media.src;
-              }, true);
+        //           /**
+        //            * Then remove the loading element and
+        //            * set the original source path again
+        //            */
+        //           this.re.removeChild(elem, elem.lastChild);
+        //           if (elem.parentElement instanceof HTMLDivElement) {
+        //             this.re.removeChild(elem.parentElement, elem.parentElement.lastChild);
+        //           }
+        //           item.src = media.src;
+        //         }, true);
 
-              if (this.error) {
-                /** Listen when the video failed to load */
-                media.addEventListener('error', () => {
+        //         if (this.error) {
+        //           /** Listen when the video failed to load */
+        //           media.addEventListener('error', () => {
 
-                  /**
-                   * Then remove the loading class and
-                   * set the error class and
-                   * the original source path again
-                   */
-                  this.re.removeChild(elem, elem.lastChild);
-                  if (elem.parentElement instanceof HTMLDivElement) {
-                    this.re.removeChild(elem.parentElement, elem.parentElement.lastChild);
-                    this.re.appendChild(elem.parentElement, this.createElement('i', this.errorClass));
-                  }
-                  item.src = media.src;
-                }, true);
-              }
-              /**
-               * Then clear the source path and
-               * include it in other element while it's loading
-               */
-              media.src = item.src;
-            }
-          });
-        }
+        //             /**
+        //              * Then remove the loading class and
+        //              * set the error class and
+        //              * the original source path again
+        //              */
+        //             this.re.removeChild(elem, elem.lastChild);
+        //             if (elem.parentElement instanceof HTMLDivElement) {
+        //               this.re.removeChild(elem.parentElement, elem.parentElement.lastChild);
+        //               this.re.appendChild(elem.parentElement, this.createElement('i', this.errorClass));
+        //             }
+        //             item.src = media.src;
+        //           }, true);
+        //         }
+        //         /**
+        //          * Then clear the source path and
+        //          * include it in other element while it's loading
+        //          */
+        //         media.src = item.src;
+        //       }
+        //     });
+        //   }
 
         /**
          * Otherwise check if it has a background image
@@ -213,17 +213,22 @@ export class LoaderDirective implements OnInit {
         /** Get the css style of the element */
         let cssStyle = window.getComputedStyle(elem);
 
-        /** @custom override min-height to 0 to hide the element */
+        /** 
+         * override min-height to 0 to hide the element
+         * @custom 
+         */
         this.re.setStyle(elem, 'min-height', '0');
+
+        /** Add the loading element as a child */
+        this.re.appendChild(elem, this.createElement('i', this.loadClass));
 
         /** Listen when the image is already loaded */
         img.addEventListener('load', () => {
 
-          if (isDevMode()) {
-            console.log(elem);
-          }
-
-          /** @custom Then remove the loading class and clear style*/
+          /**
+           * Then remove the loading class and clear style
+           * @custom
+           */
           this.re.removeStyle(elem, 'min-height');
           this.re.removeChild(elem, elem.lastChild);
         }, true);

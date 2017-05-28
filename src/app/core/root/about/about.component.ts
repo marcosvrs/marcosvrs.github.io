@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GoogleAnalyticsService } from 'app/services/google-analytics-events.service';
 
 @Component({
   selector: 'app-about',
@@ -10,6 +11,10 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
-  constructor() { }
+  constructor(private googleAnalyticsEventsService: GoogleAnalyticsService) { }
+
+  onClick(link: string) {
+    this.googleAnalyticsEventsService.emitEvent('Links', 'Click', link);
+  }
 
 }

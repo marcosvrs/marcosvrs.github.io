@@ -11,19 +11,19 @@
     <section class="row align-items-center">
       <div class="col-md-4 text-center">
         <figure>
-          <img class="img-fluid rounded" src="assets/perfil.png" alt="Profile Picture" i18n-alt>
+          <img class="img-fluid rounded profile" src="assets/perfil.png" alt="Profile Picture" loader i18n-alt>
           <figcaption i18n>Profile Picture</figcaption>
         </figure>
       </div>
       <div class="col-md-8 h-100 d-inline-block" i18n>
         <h1 class="align-self-start">Interesting facts!</h1>
-        <p>I am a Brazilian graduated Computer Engineer. I love <a href="https://github.com/marcosvrs/" target="_blank">coding</a>,
+        <p>I am a Brazilian graduated Computer Engineer. I love <a href="https://github.com/marcosvrs/" (click)="onClick('Github')" target="_blank">coding</a>,
           playing guitar and Brazil. I also LOVE coffee. I knew my vocation since I was 14 years old.</p>
-        <p>At my time at the <a href="http://unisanta.br/" target="_blank">University</a>, I collaborated in an international
+        <p>At my time at the <a href="http://unisanta.br/" (click)="onClick('Unisanta')" target="_blank">University</a>, I collaborated in an international
           project called
-          <a href="http://butterflysrl.com/" target="_blank">Butterfly</a> that became my Term paper at the end of the course.
+          <a href="http://butterflysrl.com/" (click)="onClick('Butterfly')" target="_blank">Butterfly</a> that became my Term paper at the end of the course.
         </p>
-        <p>After 5 years working at <a href="http://www.rodrimar.com.br/" target="_blank">Rodrimar</a>, I had 3 different positions:
+        <p>After 5 years working at <a href="http://www.rodrimar.com.br/" (click)="onClick('Rodrimar')" target="_blank">Rodrimar</a>, I had 3 different positions:
           IT-Internship, Technical Support Analyst and System Analyst. During my time in there I was able to gaining a wide
           knowledge that I consider decisive.</p>
         <p>At this moment, I'm based in Hamburg learning German and studying to stay up to date with the latest programming
