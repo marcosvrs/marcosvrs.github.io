@@ -3,7 +3,7 @@
 # Firebase Config
 firebase.config.*
 .firebaserc
-marcosvrs-7e2686c72475.json
+marcosvrs-*.json
 
 # Google Analytics Config
 ga.config.*
