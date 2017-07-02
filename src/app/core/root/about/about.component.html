@@ -1,13 +1,25 @@
 <article class="row align-items-center">
   <div class="col">
-    <section class="row justify-content-center align-items-center video-coding">
-      <div class="col text-center">
-        <video autoplay loop>
-          <source src="assets/coding.webm" type="video/webm">
-        </video>
+    <section class="row typewriter">
+      <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+        <pre><code id="typewriter" class="hljs javascript"><span class="hljs-keyword">let</span> me = &#123;
+            <span class="hljs-attribute">name:</span> <span class="hljs-string">'Marcos Vinícius Rubido'</span>,
+            <span class="hljs-attribute">type:</span> <span class="hljs-string" i18n>'Computer Engineer'</span>,
+            <span class="hljs-attribute">properties:</span> [
+              <span class="hljs-string">'Javascript'</span>,
+              <span class="hljs-string">'CSS'</span>,
+              <span class="hljs-string">'HTML'</span>,
+              <span class="hljs-string">'PHP'</span>
+            ]
+          &#125;;;</code></pre>
       </div>
     </section>
     <hr>
+    <section class="row align-items-center hidden-lg-up">
+      <div class="col text-center">
+        <h2>My class is Developer implemented by Engineer</h2>
+      </div>
+    </section>
     <section class="row align-items-center">
       <div class="col-md-4 text-center">
         <figure>
@@ -16,16 +28,17 @@
         </figure>
       </div>
       <div class="col-md-8 h-100 d-inline-block" i18n>
-        <h1 class="align-self-start">Interesting facts!</h1>
-        <p>I am a Brazilian graduated Computer Engineer. I love <a href="https://github.com/marcosvrs/" (click)="onClick('Github')" target="_blank">coding</a>,
-          playing guitar and Brazil. I also LOVE coffee. I knew my vocation since I was 14 years old.</p>
-        <p>At my time at the <a href="http://unisanta.br/" (click)="onClick('Unisanta')" target="_blank">University</a>, I collaborated in an international
-          project called
-          <a href="http://butterflysrl.com/" (click)="onClick('Butterfly')" target="_blank">Butterfly</a> that became my Term paper at the end of the course.
+        <h2 class="align-self-start hidden-md-down">My class is Developer implemented by Engineer.</h2>
+        <br>
+        <p>As a Computer Engineer, I have studied Physics, Calculus, Computer Architecture, Network Infrastructure...
+          <br> But what makes me love the Computer world is the Computer Programming.</p>
+        <p>At my time at the <a href="http://unisanta.br/" (click)="onClick('About', 'Click', 'Link', 'Unisanta')" target="_blank">University</a>,
+          I collaborated in an international project called
+          <a href="http://butterflysrl.com/" (click)="onClick('About', 'Click', 'Link', 'Butterfly')" target="_blank">Butterfly</a>          that became my Term paper at the end of the course.
         </p>
-        <p>After 5 years working at <a href="http://www.rodrimar.com.br/" (click)="onClick('Rodrimar')" target="_blank">Rodrimar</a>, I had 3 different positions:
-          IT-Internship, Technical Support Analyst and System Analyst. During my time in there I was able to gaining a wide
-          knowledge that I consider decisive.</p>
+        <p>After 5 years working at <a href="http://www.rodrimar.com.br/" (click)="onClick('About', 'Click', 'Link', 'Rodrimar')"
+            target="_blank">Rodrimar</a>, I had 3 different positions: IT-Internship, Technical Support Analyst and System
+          Analyst. During my time in there I was able to gaining a wide knowledge that I consider decisive.</p>
         <p>At this moment, I'm based in Hamburg learning German and studying to stay up to date with the latest programming
           languages and trying to increment my working experience in another country.</p>
       </div>

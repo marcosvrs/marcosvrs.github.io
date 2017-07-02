@@ -6,6 +6,7 @@ import { ResumeComponent } from 'app/core/root/resume/resume.component';
 import { AboutComponent } from 'app/core/root/about/about.component';
 import { RootComponent } from 'app/core/root/root.component';
 import { ContactComponent } from 'app/core/contact/contact.component';
+import { TestimonialsComponent } from "app/testimonials/testimonials.component";
 
 const routes: Routes = [
   {
@@ -22,7 +23,10 @@ const routes: Routes = [
       path: 'about',
       component: AboutComponent
     },
-    { path: 'testimonials', loadChildren: './testimonials/testimonials.module#TestimonialsModule' }],
+    {
+      path: 'testimonials',
+      loadChildren: './testimonials/testimonials.module#TestimonialsModule'
+    }],
     component: RootComponent
   },
   {
@@ -36,7 +40,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: false, preloadingStrategy: PreloadAllModules })],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

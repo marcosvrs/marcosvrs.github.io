@@ -12,9 +12,9 @@
         <div class="col align-self-center">
           <p class="text-center" i18n>Or contact me in my social medias:</p>
           <div class="btn-group d-flex justify-content-around" role="group" aria-label="Social Medias">
-            <a class="btn btn-default" href="https://www.facebook.com/Marcosvrs" target="_blank" role="button" (click)="onClick('Facebook')"><img class="icon" src="assets/facebook.png" alt="Facebook"></a>
-            <a class="btn btn-default" href="https://www.linkedin.com/in/marcosvrs/" target="_blank" role="button" (click)="onClick('LinkedIn')"><img class="icon" src="assets/linkedin.png" alt="LinkedIn"></a>
-            <a class="btn btn-default" href="https://www.xing.com/profile/MarcosVinicius_Rubido" target="_blank" role="button" (click)="onClick('Xing')"><img class="icon" src="assets/xing.png" alt="Xing"></a>
+            <a class="btn btn-default" href="https://www.facebook.com/Marcosvrs" target="_blank" role="button" (click)="onClick('Contact', 'Click', 'Button', 'Facebook')"><img class="icon" src="assets/facebook.png" alt="Facebook"></a>
+            <a class="btn btn-default" href="https://www.linkedin.com/in/marcosvrs/" target="_blank" role="button" (click)="onClick('Contact', 'Click', 'Button', 'LinkedIn')"><img class="icon" src="assets/linkedin.png" alt="LinkedIn"></a>
+            <a class="btn btn-default" href="https://www.xing.com/profile/MarcosVinicius_Rubido" target="_blank" role="button" (click)="onClick('Contact', 'Click', 'Button', 'Xing')"><img class="icon" src="assets/xing.png" alt="Xing"></a>
           </div>
         </div>
       </div>
@@ -46,7 +46,8 @@
             <input type="email" class="form-control" placeholder="example@example.com" id="email" name="email" [bsFormControl]="contactEmail"
               required ngModel email #contactEmail="ngModel" i18n-placeholder>
             <div class="form-control-feedback" *ngIf="checkModelErrors(contactEmail) && contactEmail.errors.required" i18n>Please enter your Email!</div>
-            <div class="form-control-feedback" *ngIf="checkModelErrors(contactEmail) && !contactEmail.errors.required && contactEmail.errors.email" i18n>Please enter a valid Email!</div>
+            <div class="form-control-feedback" *ngIf="checkModelErrors(contactEmail) && !contactEmail.errors.required && contactEmail.errors.email"
+              i18n>Please enter a valid Email!</div>
           </div>
           <div class="form-group">
             <label class="form-control-label" for="message" i18n>Message</label>
@@ -54,7 +55,7 @@
           </div>
         </fieldset>
         <input class="btn btn-default" type="submit" value="Submit" [disabled]="!contactForm.valid" i18n-value>
-        <i *ngIf="loading" class="fa fa-spinner fa-pulse fa-fw"></i>
+        <i *ngIf="loading" class="fa fa-spinner fa-pulse fa-fw" aria-hidden="true"></i>
       </form>
     </div>
   </section>

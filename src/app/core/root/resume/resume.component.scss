@@ -1,11 +1,14 @@
 @import 'src/variables';
-@import '~bootstrap/scss/variables';
 #code {
-    margin-top: -24px;
+    margin-top: -1.5rem;
+}
+
+#technologies {
+    word-break: break-all;
 }
 
 .board {
-    padding: 10px;
+    padding: 1rem;
     &:hover,
     &:focus {
         background: $gray-lighter;
@@ -18,7 +21,7 @@
 .background-img {
     background: no-repeat fixed center;
     background-size: cover;
-    min-height: 50vh;
+    height: 50vh;
 }
 
 #code {

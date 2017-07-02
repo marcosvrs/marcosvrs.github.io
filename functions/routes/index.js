@@ -7,10 +7,12 @@ admin.initializeApp({
   databaseURL: `https://${process.env.GCLOUD_PROJECT}.firebaseio.com`
 });
 var express = require('express');
-var cookieParser = require('cookie-parser');
 var crypto = require('crypto');
 var nodemailer = require('nodemailer');
 var router = express.Router();
+
+var reportError = require('../errors');
+
 // $ firebase functions:config:set gmail.email="myusername@gmail.com" gmail.password="secretpassword"
 const gmailEmail = encodeURIComponent(functions.config().gmail.email);
 const gmailPassword = encodeURIComponent(functions.config().gmail.password);
@@ -21,7 +23,7 @@ const mailTransport = nodemailer.createTransport(`smtps://${gmailEmail}:${gmailP
 //   res.render('index', { title: 'Express' });
 // });
 
-router.post('/sendMessage', (req, res, next) => {
+router.post('/sendMessage', (req, res) => {
   var mailOptions = { from: `"${req.body.name}" <${req.body.email}>`, to: 'marcosauda@outlook.com', subject: `Website Contact from: ${req.body.name}` };
   mailOptions.text = `Name: ${req.body.name}\nEmail: ${req.body.email}\nMessage: ${req.body.message}`;
 
@@ -36,9 +38,9 @@ router.post('/sendMessage', (req, res, next) => {
       referrer: 'sendMessage',
       remoteIp: req.ip
     };
-    return reportError(new Error(error), { httpRequest: httpRequest }).then(() => {
+    return reportError(new Error(error), { httpRequest }).then(() => {
       mailTransport.close();
-      res.status(500).end();
+      res.status(error.status || 500).end();
     });
   });
 });
@@ -55,7 +57,7 @@ function linkedInClient() {
   return require('node-linkedin')(
     functions.config().linkedin.client_id,
     functions.config().linkedin.client_secret,
-    `https://marcosvrs.github.io/`);
+    `https://marcosvrs.com/`);
 }
 
 /**
@@ -64,13 +66,10 @@ function linkedInClient() {
  */
 function linkedInRedirect(req, res) {
   const Linkedin = linkedInClient();
-
-  cookieParser()(req, res, () => {
-    const state = req.cookies.state || crypto.randomBytes(20).toString('hex');
-    console.log('Setting verification state:', state);
-    res.cookie('state', state.toString(), { maxAge: 3600000, secure: true, httpOnly: true });
-    Linkedin.auth.authorize(res, OAUTH_SCOPES, state.toString());
-  });
+  const state = req.cookies.state || crypto.randomBytes(20).toString('hex');
+  console.log('Setting verification state:', state);
+  res.cookie('state', state.toString(), { maxAge: 3600000, secure: true, httpOnly: true });
+  Linkedin.auth.authorize(res, OAUTH_SCOPES, state.toString());
 };
 
 /**
@@ -83,40 +82,38 @@ function linkedInToken(req, res) {
   const Linkedin = linkedInClient();
 
   try {
-    cookieParser()(req, res, () => {
-      if (!req.cookies.state) {
-        throw new Error('State cookie not set or expired. Maybe you took too long to authorize. Please try again.');
+    if (!req.cookies.state) {
+      throw new Error('State cookie not set or expired. Maybe you took too long to authorize. Please try again.');
+    }
+    console.log('Received verification state:', req.cookies.state);
+    Linkedin.auth.authorize(OAUTH_SCOPES, req.cookies.state); // Makes sure the state parameter is set
+    console.log('Received auth code:', req.query.code);
+    console.log('Received state:', req.query.state);
+    Linkedin.auth.getAccessToken(res, req.query.code, req.query.state, (error, results) => {
+      if (error) {
+        throw error;
       }
-      console.log('Received verification state:', req.cookies.state);
-      Linkedin.auth.authorize(OAUTH_SCOPES, req.cookies.state); // Makes sure the state parameter is set
-      console.log('Received auth code:', req.query.code);
-      console.log('Received state:', req.query.state);
-      Linkedin.auth.getAccessToken(res, req.query.code, req.query.state, (error, results) => {
+      console.log('Received Access Token:', results.access_token);
+      const linkedin = Linkedin.init(results.access_token);
+      linkedin.people.me((error, userResults) => {
         if (error) {
           throw error;
         }
-        console.log('Received Access Token:', results.access_token);
-        const linkedin = Linkedin.init(results.access_token);
-        linkedin.people.me((error, userResults) => {
-          if (error) {
-            throw error;
-          }
-          console.log('Auth code exchange result received:', userResults);
+        console.log('Auth code exchange result received:', userResults);
 
-          // We have a LinkedIn access token and the user identity now.
-          const accessToken = results.access_token;
-          const linkedInUserID = userResults.id;
-          const profilePic = userResults.pictureUrl;
-          const userName = userResults.formattedName;
-          const email = userResults.emailAddress;
+        // We have a LinkedIn access token and the user identity now.
+        const accessToken = results.access_token;
+        const linkedInUserID = userResults.id;
+        const profilePic = userResults.pictureUrl;
+        const userName = userResults.formattedName;
+        const email = userResults.emailAddress;
 
-          // Create a Firebase account and get the Custom Auth Token.
-          createFirebaseAccount(linkedInUserID, userName, profilePic, email, accessToken).then(
-            firebaseToken => {
-              // Serve an HTML page that signs the user in and updates the user profile.
-              res.jsonp({ token: firebaseToken });
-            });
-        });
+        // Create a Firebase account and get the Custom Auth Token.
+        createFirebaseAccount(linkedInUserID, userName, profilePic, email, accessToken).then(
+          firebaseToken => {
+            // Serve an HTML page that signs the user in and updates the user profile.
+            res.jsonp({ token: firebaseToken });
+          });
       });
     });
   } catch (error) {
@@ -169,8 +166,8 @@ function createFirebaseAccount(linkedinID, displayName, photoURL, email, accessT
   });
 }
 
-//app.post('linkedInRedirect', linkedInRedirect());
-//app.post('linkedInToken', linkedInToken());
+router.post('linkedInRedirect', linkedInRedirect);
+router.post('linkedInToken', linkedInToken);
 
 //-------------------------------------------------------------------------------------------------------------------------------
 

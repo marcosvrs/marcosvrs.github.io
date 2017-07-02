@@ -2,8 +2,9 @@
 {
     "search.exclude": {
         "**/node_modules": false
-        // },
-        // "files.exclude": {
+        },
+        "files.exclude": {
+            "**/node_modules": true
         //     "**/node_modules/[^b]*": true,
         //     "**/node_modules/?[^o]*": true,
         //     "**/node_modules/??[^o]*": true,

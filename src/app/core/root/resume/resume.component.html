@@ -1,9 +1,9 @@
-<article class="row justify-content-start">
+<article class="row">
   <div class="col">
     <div id="code" class="background-img" loader></div>
-    <section class="row align-items-start board">
+    <section class="row board">
       <div class="col-md-3">
-        <h3 class="text-right" i18n>TECHNOLOGIES</h3>
+        <h3 id="technologies" class="text-right" i18n>TECHNOLOGIES</h3>
       </div>
       <div class="col-md-3" i18n>
         <h4>Comfortable with</h4>
@@ -33,6 +33,7 @@
             </ul>
           </li>
           <li>Version Control (GIT)</li>
+          <li>Package Managment (NPM)</li>
         </ul>
       </div>
       <div class="col-md-3" i18n>
@@ -65,13 +66,15 @@
         </ul>
       </div>
       <div class="col-md-3" i18n>
-        <h4>Learning</h4>
+        <h4>Insight</h4>
         <ul>
-          <li>Frontend Development
+          <li>Web Development
             <ul>
               <li>Typescript</li>
               <li>Angular (4)</li>
               <li>Bootstrap Framework (v4)</li>
+              <li>Node.js</li>
+              <li>RESTful</li>
             </ul>
           </li>
           <li>Database
@@ -83,15 +86,15 @@
       </div>
     </section>
     <div id="phone" class="background-img" loader></div>
-    <section class="row align-items-start board">
+    <section class="row board">
       <div class="col-md-4">
         <h3 class="text-right" i18n>WORK EXPERIENCE</h3>
       </div>
       <div class="col-md-8">
-        <div class="row align-items-start">
+        <div class="row">
           <div class="col" i18n>
-            <h4>System Analyst <small>Rodrimar Port Terminals</small></h4>
-            <p>July, 2015 - December, 2016</p>
+            <h4>System Analyst <small><a href="http://rodrimar.com.br/" (click)="onClick('Resume', 'Click', 'Link', 'Rodrimar')" target="_blank">Rodrimar Group</a></small></h4>
+            <p>July 2015 - December 2016</p>
             <ul>
               <li>Support for ERP TOTVS Logix System for Human Resources, Logistic, Finance and Accounting processes;</li>
               <li>Sharepoint Server and Reporting Services Management;</li>
@@ -103,20 +106,20 @@
           </div>
         </div>
         <hr>
-        <div class="row align-items-start">
+        <div class="row">
           <div class="col" i18n>
-            <h4>C# for WEB (ASP.NET) Developer <small>Free Lancer</small></h4>
-            <p>January, 2016 - July, 2016</p>
+            <h4>C# for WEB (ASP.NET) Developer <small>Freelancer</small></h4>
+            <p>January 2016 - July 2016</p>
             <ul>
               <li>Developer for web project in ASP.NET (jQuery, HTML) and C# for Web;</li>
             </ul>
           </div>
         </div>
         <hr>
-        <div class="row align-items-start">
+        <div class="row">
           <div class="col" i18n>
-            <h4>Technical Support Analyst <small>Rodrimar Port Terminals</small></h4>
-            <p>February, 2014 - July, 2015</p>
+            <h4>Technical Support Analyst <small><a href="http://rodrimar.com.br/" (click)="onClick('Resume', 'Click', 'Link', 'Rodrimar2')" target="_blank">Rodrimar Group</a></small></h4>
+            <p>February 2014 - July 2015</p>
             <ul>
               <li>Network and Infrastructure projects Supervisor;</li>
               <li>Ruckus Wireless system administrator;</li>
@@ -127,10 +130,10 @@
           </div>
         </div>
         <hr>
-        <div class="row align-items-start">
+        <div class="row">
           <div class="col" i18n>
-            <h4>Intern <small>Rodrimar Port Terminals</small></h4>
-            <p>February, 2012 - February, 2014</p>
+            <h4>Trainee <small><a href="http://rodrimar.com.br/" (click)="onClick('Resume', 'Click', 'Link', 'Rodrimar3')" target="_blank">Rodrimar Group</a></small></h4>
+            <p>February 2012 - February 2014</p>
             <ul>
               <li>Help Desk Monitoring;</li>
               <li>Monitoring the Network, Desktop and Devices Support;</li>
@@ -141,14 +144,16 @@
       </div>
     </section>
     <div id="tablet" class="background-img" loader></div>
-    <section class="row align-items-start board">
+    <section class="row board">
       <div class="col-md-4">
         <h3 class="text-right" i18n>EDUCATION</h3>
       </div>
       <div class="col-md-8" i18n>
-        <h4>COMPUTER ENGINEERING GRADUATION <small class="subtitle">Santa Cecília University - Santos, SP, Brazil</small></h4>
-        <p>February, 2011 - December, 2015</p>
+        <h4>COMPUTER ENGINEERING <small class="subtitle"><a href="http://unisanta.br/" (click)="onClick('Resume', 'Click', 'Link', 'Unisanta')" target="_blank">Santa Cecília University - Santos, SP, Brazil</a></small></h4>
+        <p>February 2011 - December 2015</p>
         <ul>
+          <li><a href="http://anabin.kmk.org/no_cache/filter/institutionen.html" (click)="onClick('Resume', 'Click', 'Link', 'anabin')"
+              target="_blank" title="H+ bedeutet, dass die betreffende Institution in ihrem Sitzland als Hochschule anerkannt ist und auch in Deutschland als Hochschulinstitution betrachtet wird.">ANABIN Status: H+</a></li>
           <li>C++; C# (.NET) for Desktop; Objective C (Arduino);</li>
           <li>Knowledge about Digital Communication, Electronic Components (Integrated Circuits), Network Infrastructure, Automation,
             Computer Architecture;</li>
