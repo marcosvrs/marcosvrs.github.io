@@ -7,14 +7,20 @@ import { TestimonialsComponent } from './testimonials.component';
 import { AddTestimonialComponent } from './add-testimonial/add-testimonial.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { TestimonialService } from 'app/services/testimonial.service';
+import { DirectivesModule } from "app/directives/directives.module";
 
 @NgModule({
   imports: [
     CommonModule,
     TestimonialsRoutingModule,
-    FormsModule
+    FormsModule,
+    DirectivesModule
   ],
-  declarations: [TestimonialsComponent, AddTestimonialComponent, TestimonialComponent],
+  declarations: [
+    TestimonialsComponent,
+    AddTestimonialComponent,
+    TestimonialComponent
+  ],
   providers: [TestimonialService],
 })
 export class TestimonialsModule { }

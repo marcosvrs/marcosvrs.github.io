@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GoogleAnalyticsService } from 'app/services/google-analytics-events.service';
 
 @Component({
   selector: 'app-resume',
@@ -10,6 +11,10 @@ import { Component } from '@angular/core';
 })
 export class ResumeComponent {
 
-  constructor() { }
+  constructor(private googleAnalyticsService: GoogleAnalyticsService) { }
+
+  onClick(category: string, action: string, label: string, value?: any) {
+    this.googleAnalyticsService.emitEvent(category, action, label, value);
+  }
 
 }

@@ -4,14 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { TestimonialsComponent } from 'app/testimonials/testimonials.component';
 import { AddTestimonialComponent } from 'app/testimonials/add-testimonial/add-testimonial.component';
 
-const routes: Routes = [{
-  path: '', component: TestimonialsComponent, children: [
-    { path: 'add', component: AddTestimonialComponent }
-  ]
+const testimonialRoutes: Routes = [{
+  path: '', component: TestimonialsComponent
 }];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(testimonialRoutes)],
   exports: [RouterModule]
 })
 export class TestimonialsRoutingModule { }

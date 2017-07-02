@@ -8,10 +8,10 @@ import { GoogleAnalyticsService } from 'app/services/google-analytics-events.ser
 })
 export class FooterComponent {
 
-  constructor(private googleAnalyticsEventsService: GoogleAnalyticsService) { }
+  constructor(private googleAnalyticsService: GoogleAnalyticsService) { }
 
-  onClick(button: string) {
-    this.googleAnalyticsEventsService.emitEvent('Buttons', 'Click', button);
+  onClick(category: string, action: string, label: string, value?: any) {
+    this.googleAnalyticsService.emitEvent(category, action, label, value);
   }
 
 }

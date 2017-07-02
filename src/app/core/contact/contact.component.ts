@@ -30,7 +30,7 @@ export class ContactComponent implements AfterViewChecked, OnDestroy {
   contactNameSubscribe: Subscription;
   contactEmailSubscribe: Subscription;
 
-  constructor(private contactService: ContactService, private googleAnalyticsEventsService: GoogleAnalyticsService) { }
+  constructor(private contactService: ContactService, private googleAnalyticsService: GoogleAnalyticsService) { }
 
   ngAfterViewChecked() {
     if (this.contactForm.form.contains('name') && !this.contactNameSubscribe) {
@@ -64,7 +64,7 @@ export class ContactComponent implements AfterViewChecked, OnDestroy {
   onSubmit(values: Contact) {
     this.loading = true;
     this.success = this.error = false;
-    this.googleAnalyticsEventsService.emitEvent('Forms', 'Submit', 'Contact');
+    this.googleAnalyticsService.emitEvent('Forms', 'Submit', 'Contact');
     this.contactService.sendContactMessage(values)
       .subscribe(
       response => {
@@ -102,7 +102,7 @@ export class ContactComponent implements AfterViewChecked, OnDestroy {
     }
   }
 
-  onClick(button: string) {
-    this.googleAnalyticsEventsService.emitEvent('Buttons', 'Click', button);
+  onClick(category: string, action: string, label: string, value?: any) {
+    this.googleAnalyticsService.emitEvent(category, action, label, value);
   }
 }

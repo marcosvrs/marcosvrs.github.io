@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 import { TestimonialService } from 'app/services/testimonial.service';
 
@@ -9,9 +10,22 @@ import { TestimonialService } from 'app/services/testimonial.service';
 })
 export class AddTestimonialComponent {
 
+  @Output() hideModalClick = new EventEmitter<boolean>();
+
+  /** Auxiliary variables for state */
+  loading: boolean = false;
+  error: boolean = false;
+  success: boolean = false;
+  linkedinLogin: boolean = false;
+
   constructor(private testimonialService: TestimonialService) { }
 
-  hideModalClick() {
+  onLinkedinLogin() {
+    this.testimonialService.linkedinAuth();
+  }
+
+  onHideModalClick() {
+    this.hideModalClick.emit();
   }
 
   addButtonClick() {

@@ -1,16 +1,11 @@
 var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var cors = require('cors');
-var bodyParser = require('body-parser');
 
+var reportError = require('./errors');
 var index = require('./routes/index');
 
 var app = express();
 
-app.use(cors());
-
-app.use('/', index);
+app.use('/API', index);
 //app.use('/users', users);
 
 // catch 404 and forward to error handler
@@ -25,10 +20,16 @@ app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+  const httpRequest = {
+    method: req.method,
+    url: req.originalUrl,
+    userAgent: req.get('user-agent'),
+    referrer: 'sendMessage',
+    remoteIp: req.ip
+  };
+  return reportError(new Error(err), { httpRequest }).then(() => {
+    res.status(err.status || 500).end();
+  });
 });
 
 module.exports = app;

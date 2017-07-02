@@ -1,11 +1,10 @@
 @import 'src/variables';
-@import '~bootstrap/scss/variables';
 #code {
-    margin-top: -24px;
+    margin-top: -1.5rem;
 }
 
 .board {
-    padding: 10px;
+    padding: 1rem;
     &:hover,
     &:focus {
         background: $gray-lighter;
