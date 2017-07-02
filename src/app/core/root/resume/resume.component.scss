@@ -3,6 +3,10 @@
     margin-top: -1.5rem;
 }
 
+#technologies {
+    word-break: break-all;
+}
+
 .board {
     padding: 1rem;
     &:hover,
@@ -17,7 +21,7 @@
 .background-img {
     background: no-repeat fixed center;
     background-size: cover;
-    min-height: 50vh;
+    height: 50vh;
 }
 
 #code {
