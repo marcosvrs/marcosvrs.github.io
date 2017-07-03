@@ -256,7 +256,7 @@ export class LoaderDirective implements OnInit {
         if (isDevMode()) {
           console.log(cssStyle.backgroundImage);
         }
-        img.src = cssStyle.backgroundImage.replace('url(', '').replace(')', '');
+        img.src = cssStyle.backgroundImage.replace('url(', '').replace(/["'()]/g, "");
       }
     }
   }
