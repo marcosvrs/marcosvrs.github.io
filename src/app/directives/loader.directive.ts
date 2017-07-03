@@ -253,7 +253,10 @@ export class LoaderDirective implements OnInit {
          * Get the path of the background image and
          * sets to the auxiliary image element
          */
-        img.src = cssStyle.backgroundImage.slice(5, -2);
+        if (isDevMode()) {
+          console.log(cssStyle.backgroundImage);
+        }
+        img.src = cssStyle.backgroundImage.replace('url(', '').replace(')', '');
       }
     }
   }
