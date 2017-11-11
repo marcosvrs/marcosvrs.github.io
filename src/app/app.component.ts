@@ -11,7 +11,7 @@ import { GoogleAnalyticsService } from 'app/services/google-analytics-events.ser
 
 export class AppComponent implements OnInit {
   errorText: any;
-  error: boolean = false;
+  error = false;
   /**
    * Create a App Component
    * @param router - Router provider service
@@ -31,8 +31,8 @@ export class AppComponent implements OnInit {
       if (isDevMode()) {
         console.log(params);
       }
-      if (params['error'] === "404") {
-        this.errorText = "The page you requested cannot be found!";
+      if (params['error'] === '404') {
+        this.errorText = 'The page you requested cannot be found!';
         this.error = true;
       } else if (params['error']) {
         this.error = true;

@@ -13,10 +13,10 @@ export class AddTestimonialComponent {
   @Output() hideModalClick = new EventEmitter<boolean>();
 
   /** Auxiliary variables for state */
-  loading: boolean = false;
-  error: boolean = false;
-  success: boolean = false;
-  linkedinLogin: boolean = false;
+  loading = false;
+  error = false;
+  success = false;
+  linkedinLogin = false;
 
   constructor(private testimonialService: TestimonialService) { }
 

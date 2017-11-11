@@ -1,7 +1,7 @@
 import { Directive, ElementRef, Renderer2, OnInit, isDevMode } from '@angular/core';
 
 @Directive({
-  selector: '[loader]'
+  selector: '[appLoader]'
 })
 export class LoaderDirective implements OnInit {
   /**
@@ -9,7 +9,7 @@ export class LoaderDirective implements OnInit {
    * If it has a media to be loaded then put the loading class
    * while the media is loading. Then listen to when the media
    * is already loaded, clear the loading class from the element.
-   * 
+   *
    * Example to use:
    *   `<img src="path" loader>
    *    <div>
@@ -20,24 +20,24 @@ export class LoaderDirective implements OnInit {
    *        <source src="path">
    *      </video>
    *    </div>`
-   * 
+   *
    *   Or any tag with a background image (style or css):
    *   `<div style="background-image: url('path');" loader>`
    */
 
   /** The class to be loaded and while the media is loading */
-  loadClass: string = 'fa fa-spinner fa-pulse fa-3x fa-fw';
+  loadClass = 'fa fa-spinner fa-pulse fa-3x fa-fw';
 
   /** The class to be loaded when the media get a error to load */
-  errorClass: string = 'fa fa-times fa-3x';
+  errorClass = 'fa fa-times fa-3x';
 
   /** If you don't want to show the error element, change this var to false */
-  private error: boolean = true;
+  private error = true;
 
   constructor(private el: ElementRef, private re: Renderer2) { }
 
   ngOnInit() {
-    let elem = this.el.nativeElement;
+    const elem = this.el.nativeElement;
 
     /** Check if it's a HTML Element */
     if (elem instanceof HTMLElement) {
@@ -49,7 +49,7 @@ export class LoaderDirective implements OnInit {
         this.re.appendChild(elem, this.createElement('i', this.loadClass));
 
         /** Create another element to load the image in background */
-        let img = new Image();
+        const img = new Image();
 
         /** Listen when the image is already loaded */
         img.addEventListener('load', () => {
@@ -83,8 +83,8 @@ export class LoaderDirective implements OnInit {
           }, true);
         }
 
-        /** 
-         * Then clear the source path and the alt attribute 
+        /**
+         * Then clear the source path and the alt attribute
          * and include it in other element while it's loading
          */
         img.src = elem.src;
@@ -208,14 +208,14 @@ export class LoaderDirective implements OnInit {
       } else if (window.getComputedStyle(elem).backgroundImage) {
 
         /** Create another element to load the image in background */
-        let img = new Image();
+        const img = new Image();
 
         /** Get the css style of the element */
-        let cssStyle = window.getComputedStyle(elem);
+        const cssStyle = window.getComputedStyle(elem);
 
-        /** 
+        /**
          * override min-height to 0 to hide the element
-         * @custom 
+         * @custom
          */
         this.re.setStyle(elem, 'min-height', '0');
 
@@ -249,20 +249,20 @@ export class LoaderDirective implements OnInit {
             this.re.appendChild(elem, this.createElement('i', this.errorClass));
           }, true);
         }
-        /** 
+        /**
          * Get the path of the background image and
          * sets to the auxiliary image element
          */
         if (isDevMode()) {
           console.log(cssStyle.backgroundImage);
         }
-        img.src = cssStyle.backgroundImage.replace('url(', '').replace(/["'()]/g, "");
+        img.src = cssStyle.backgroundImage.replace('url(', '').replace(/["'()]/g, '');
       }
     }
   }
 
   private createElement(tagName: string, classes?: string): any {
-    var element = document.createElement('i');
+    const element = document.createElement('i');
     classes.split(' ').forEach((str) => this.re.addClass(element, str));
     return element;
   }

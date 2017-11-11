@@ -1,12 +1,12 @@
 import { Injectable, isDevMode } from '@angular/core';
-
+import { database } from 'firebase';
 import { FirebaseService } from 'app/services/firebase.service';
 import { Testimonial } from 'app/models/testimonial.model';
 
 @Injectable()
 export class TestimonialService {
 
-  private testimonialsRef:firebase.database.Reference;
+  private testimonialsRef: database.Reference;
 
   constructor(private firebase: FirebaseService) {
     this.testimonialsRef = this.firebase.app.database().ref('testimonials');
@@ -18,12 +18,12 @@ export class TestimonialService {
 
   getTestimonials() {
     return this.testimonialsRef.once('value').then((value) => {
-      var ret: Testimonial[] = [];
+      const ret: Testimonial[] = [];
       value.forEach((testimonial) => {
         ret.push(new Testimonial(<Testimonial>testimonial.toJSON()));
         return false;
       });
-      return ret;  
+      return ret;
   });
   }
 

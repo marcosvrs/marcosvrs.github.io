@@ -10,8 +10,8 @@ export class ContactService {
   constructor(private http: Http, private firebase: FirebaseService) { }
 
   public sendContactMessage(message: Contact) {
-    let url = '/API/sendMessage';
-    let headers = new Headers({'Content-Type': 'application/json'});
+    const url = '/API/sendMessage';
+    const headers = new Headers({'Content-Type': 'application/json'});
     if (isDevMode()) {
       console.log('url: ' + url);
       console.log('headers: ');

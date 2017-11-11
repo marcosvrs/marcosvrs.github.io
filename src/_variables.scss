@@ -1,6 +1,6 @@
-@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/functions', '~bootstrap/scss/variables';
 //@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 $icon-size: 2rem;
 $long-animation: 1s ease-out;
 $default-animation: 0.3s ease-out;
-$brand-primary: $gray-dark; //not working (?)
+$brand-primary: $gray-800;

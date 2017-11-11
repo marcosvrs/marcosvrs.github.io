@@ -1,15 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { GoogleAnalyticsService } from 'app/services/google-analytics-events.service';
 
 @Component({
   selector: 'app-resume',
-  host: {
-    class: 'container-fluid'
-  },
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent {
+
+  @HostBinding('class') class = 'container-fluid';
 
   constructor(private googleAnalyticsService: GoogleAnalyticsService) { }
 

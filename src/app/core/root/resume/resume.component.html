@@ -1,6 +1,6 @@
 <article class="row">
   <div class="col">
-    <div id="code" class="background-img" loader></div>
+    <div id="code" class="background-img" appLoader></div>
     <section class="row board">
       <div class="col-md-3">
         <h3 id="technologies" class="text-right" i18n>TECHNOLOGIES</h3>
@@ -12,14 +12,10 @@
             <ul>
               <li>HTML[5] / CSS[3]</li>
               <li>LESS / SCSS (SASS)</li>
-              <li>Bootstrap Framework (v3)</li>
+              <li>Bootstrap Framework</li>
               <li>Responsive Layout and Design</li>
               <li>PHP</li>
-              <li>Email Marketing
-                <ul>
-                  <li>Foundation</li>
-                </ul>
-              </li>
+              <li>Twig Template</li>
             </ul>
           </li>
           <li>Desktop Development
@@ -45,6 +41,11 @@
               <li>Javascript</li>
               <li>jQuery</li>
               <li>ASP.NET</li>
+              <li>Email Marketing
+                <ul>
+                  <li>Foundation</li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li>Desktop Development
@@ -58,11 +59,6 @@
               <li>Oracle</li>
             </ul>
           </li>
-          <li>Others
-            <ul>
-              <li>Objective C (Arduino)</li>
-            </ul>
-          </li>
         </ul>
       </div>
       <div class="col-md-3" i18n>
@@ -71,10 +67,15 @@
           <li>Web Development
             <ul>
               <li>Typescript</li>
-              <li>Angular (4)</li>
-              <li>Bootstrap Framework (v4)</li>
+              <li>Angular (v4)</li>
               <li>Node.js</li>
-              <li>RESTful</li>
+              <li>RESTful API</li>
+            </ul>
+          </li>
+          <li>QA Engineering
+            <ul>
+              <li>Selenium</li>
+              <li>Mochajs</li>
             </ul>
           </li>
           <li>Database
@@ -85,12 +86,27 @@
         </ul>
       </div>
     </section>
-    <div id="phone" class="background-img" loader></div>
+    <div id="phone" class="background-img" appLoader></div>
     <section class="row board">
       <div class="col-md-4">
         <h3 class="text-right" i18n>WORK EXPERIENCE</h3>
       </div>
       <div class="col-md-8">
+        <div class="row">
+          <div class="col" i18n>
+            <h4>Praktikant - Software Engineer Web Development <small><a href="https://www.tom-tailor-group.com" (click)="onClick('Resume', 'Click', 'Link', 'Tom Tailor')" target="_blank">Tom Tailor Group</a></small></h4>
+            <p>July 2017 - January 2018</p>
+            <ul>
+              <li>Migration of the Content from the old webshop to the new eCommerce Plataform;</li>
+              <li>Development of the eCommerce Plataform;</li>
+              <li>QA Engineering (BrowserStack/Selenium/Mochajs);</li>
+              <li>HTML, [S]CSS, JS and PHP [Twig];</li>
+              <li>Spryker Commerce OS;</li>
+              <li>Working with Agile Teams.</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
         <div class="row">
           <div class="col" i18n>
             <h4>System Analyst <small><a href="http://rodrimar.com.br/" (click)="onClick('Resume', 'Click', 'Link', 'Rodrimar')" target="_blank">Rodrimar Group</a></small></h4>
@@ -143,7 +159,7 @@
         </div>
       </div>
     </section>
-    <div id="tablet" class="background-img" loader></div>
+    <div id="tablet" class="background-img" appLoader></div>
     <section class="row board">
       <div class="col-md-4">
         <h3 class="text-right" i18n>EDUCATION</h3>
@@ -153,7 +169,7 @@
         <p>February 2011 - December 2015</p>
         <ul>
           <li><a href="http://anabin.kmk.org/no_cache/filter/institutionen.html" (click)="onClick('Resume', 'Click', 'Link', 'anabin')"
-              target="_blank" title="H+ bedeutet, dass die betreffende Institution in ihrem Sitzland als Hochschule anerkannt ist und auch in Deutschland als Hochschulinstitution betrachtet wird.">ANABIN Status: H+</a></li>
+              target="_blank" title="H+ bedeutet, dass die betreffende Institution in ihrem Sitzland als Hochschule anerkannt ist und auch in Deutschland als Hochschulinstitution betrachtet wird.">ANABIN Status: H+</a> <sup><abbr  title="H+ means that the institution in question is recognized as a university in the country of its own and is also regarded as a higher education institution in Germany.">[1]</abbr></sup></li>
           <li>C++; C# (.NET) for Desktop; Objective C (Arduino);</li>
           <li>Knowledge about Digital Communication, Electronic Components (Integrated Circuits), Network Infrastructure, Automation,
             Computer Architecture;</li>

@@ -4,7 +4,7 @@
       <div class="row align-items-center justify-content-start">
         <div class="col align-self-center" i18n>
           <p class="text-center">You can send me a email directly for:</p>
-          <p class="text-center">marcosauda@outlook.com</p>
+          <p class="text-center"><a href="mailto:me@marcosvrs.com?subject=Website Contact from Direct Link">me@marcosvrs.com</a></p>
         </div>
       </div>
       <hr>
@@ -12,9 +12,15 @@
         <div class="col align-self-center">
           <p class="text-center" i18n>Or contact me in my social medias:</p>
           <div class="btn-group d-flex justify-content-around" role="group" aria-label="Social Medias">
-            <a class="btn btn-default" href="https://www.facebook.com/Marcosvrs" target="_blank" role="button" (click)="onClick('Contact', 'Click', 'Button', 'Facebook')"><img class="icon" src="assets/facebook.png" alt="Facebook"></a>
-            <a class="btn btn-default" href="https://www.linkedin.com/in/marcosvrs/" target="_blank" role="button" (click)="onClick('Contact', 'Click', 'Button', 'LinkedIn')"><img class="icon" src="assets/linkedin.png" alt="LinkedIn"></a>
-            <a class="btn btn-default" href="https://www.xing.com/profile/MarcosVinicius_Rubido" target="_blank" role="button" (click)="onClick('Contact', 'Click', 'Button', 'Xing')"><img class="icon" src="assets/xing.png" alt="Xing"></a>
+            <a class="btn btn-default" href="https://www.facebook.com/Marcosvrs" target="_blank" role="button" (click)="onClick('Contact', 'Click', 'Button', 'Facebook')">
+              <img class="icon" src="assets/facebook.png" alt="Facebook">
+            </a>
+            <a class="btn btn-default" href="https://www.linkedin.com/in/marcosvrs/" target="_blank" role="button" (click)="onClick('Contact', 'Click', 'Button', 'LinkedIn')">
+              <img class="icon" src="assets/linkedin.png" alt="LinkedIn">
+            </a>
+            <a class="btn btn-default" href="https://www.xing.com/profile/MarcosVinicius_Rubido" target="_blank" role="button" (click)="onClick('Contact', 'Click', 'Button', 'Xing')">
+              <img class="icon" src="assets/xing.png" alt="Xing">
+            </a>
           </div>
         </div>
       </div>
@@ -27,31 +33,33 @@
             <button type="button" class="close" aria-label="Close" (click)="error = false">
               <span aria-hidden="true">&times;</span>
             </button>
-            <span i18n><strong>An error occurred!</strong> Please try again.</span>
+            <span i18n>
+              <strong>An error occurred!</strong> Please try again.</span>
           </div>
           <div *ngIf="success" class="alert alert-success alert-dismissible fade show" role="alert">
             <button type="button" class="close" aria-label="Close" (click)="success = false">
               <span aria-hidden="true">&times;</span>
             </button>
-            <span i18n><strong>Your message was sent!</strong> Thanks for contacting me.</span>
+            <span i18n>
+              <strong>Your message was sent!</strong> Thanks for contacting me.</span>
           </div>
           <div class="form-group">
             <label class="form-control-label" for="name" i18n>Name</label>
-            <input type="text" class="form-control" placeholder="Name" id="name" name="name" [bsFormControl]="contactName" required ngModel
-              #contactName="ngModel" i18n-placeholder>
-            <div class="form-control-feedback" *ngIf="checkModelErrors(contactName)" i18n>Please enter your name!</div>
+            <input type="text" class="form-control" placeholder="Name" id="name" name="name" appBsFormControl required ngModel #contactName="ngModel"
+              i18n-placeholder>
+            <div class="invalid-feedback" *ngIf="checkModelErrors(contactName)" i18n>Please enter your name!</div>
           </div>
           <div class="form-group">
             <label class="form-control-label" for="email" i18n>Email</label>
-            <input type="email" class="form-control" placeholder="example@example.com" id="email" name="email" [bsFormControl]="contactEmail"
-              required ngModel email #contactEmail="ngModel" i18n-placeholder>
-            <div class="form-control-feedback" *ngIf="checkModelErrors(contactEmail) && contactEmail.errors.required" i18n>Please enter your Email!</div>
-            <div class="form-control-feedback" *ngIf="checkModelErrors(contactEmail) && !contactEmail.errors.required && contactEmail.errors.email"
+            <input type="email" class="form-control" placeholder="example@example.com" id="email" name="email" appBsFormControl required
+              ngModel email #contactEmail="ngModel" i18n-placeholder>
+            <div class="invalid-feedback" *ngIf="checkModelErrors(contactEmail) && contactEmail.errors.required" i18n>Please enter your Email!</div>
+            <div class="invalid-feedback" *ngIf="checkModelErrors(contactEmail) && !contactEmail.errors.required && contactEmail.errors.email"
               i18n>Please enter a valid Email!</div>
           </div>
           <div class="form-group">
             <label class="form-control-label" for="message" i18n>Message</label>
-            <textarea class="form-control" [bsFormControl]="contactMessage" rows="6" id="message" name="message" required ngModel #contactMessage="ngModel"></textarea>
+            <textarea class="form-control" appBsFormControl rows="6" id="message" name="message" required ngModel #contactMessage="ngModel"></textarea>
           </div>
         </fieldset>
         <input class="btn btn-default" type="submit" value="Submit" [disabled]="!contactForm.valid" i18n-value>

@@ -1,19 +1,19 @@
 import { Injectable, isDevMode } from '@angular/core';
-import { initializeApp } from 'firebase';
+import { initializeApp, app as firebase } from 'firebase';
 
-import { firebaseConfig } from 'app/firebase.config.prod';
-import { firebaseConfigDev } from 'app/firebase.config';
+import { firebaseConfig as firebaseConfigProd } from 'app/firebase.config.prod';
+import { firebaseConfig as firebaseConfigDev } from 'app/firebase.config';
 
 @Injectable()
 export class FirebaseService {
 
-  public app: firebase.app.App;
+  public app: firebase.App;
   constructor() {
-    var firebase: any = {};
+    let firebaseConfig: any;
     if (isDevMode()) {
-      firebase = firebaseConfigDev;
+      firebaseConfig = firebaseConfigDev;
     } else {
-      firebase = firebaseConfig;
+      firebaseConfig = firebaseConfigProd;
     }
     this.app = initializeApp(firebase);
   }

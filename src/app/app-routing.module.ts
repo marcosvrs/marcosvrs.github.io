@@ -6,7 +6,7 @@ import { ResumeComponent } from 'app/core/root/resume/resume.component';
 import { AboutComponent } from 'app/core/root/about/about.component';
 import { RootComponent } from 'app/core/root/root.component';
 import { ContactComponent } from 'app/core/contact/contact.component';
-import { TestimonialsComponent } from "app/testimonials/testimonials.component";
+import { TestimonialsComponent } from 'app/testimonials/testimonials.component';
 
 const routes: Routes = [
   {

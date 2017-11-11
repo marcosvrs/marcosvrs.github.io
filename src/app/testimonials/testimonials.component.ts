@@ -9,8 +9,8 @@ import { TestimonialService } from 'app/services/testimonial.service';
   styleUrls: ['./testimonials.component.scss']
 })
 export class TestimonialsComponent implements OnInit {
-  testimonials; //: Promise<any>;
-  showAddTestimonialModal: boolean = false;
+  testimonials; // : Promise<any>;
+  showAddTestimonialModal = false;
 
   constructor(private testimonialService: TestimonialService) { }
 

@@ -7,7 +7,7 @@ import { TestimonialsComponent } from './testimonials.component';
 import { AddTestimonialComponent } from './add-testimonial/add-testimonial.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { TestimonialService } from 'app/services/testimonial.service';
-import { DirectivesModule } from "app/directives/directives.module";
+import { DirectivesModule } from 'app/directives/directives.module';
 
 @NgModule({
   imports: [
