@@ -1,49 +1,48 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { GoogleAnalyticsService } from 'app/services/google-analytics-events.service';
 
 @Component({
   selector: 'app-about',
-  host: {
-    class: 'container-fluid'
-  },
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
 
+  @HostBinding('class') class = 'container-fluid';
+
   constructor(private googleAnalyticsService: GoogleAnalyticsService) { }
 
   ngOnInit() {
-    var typer = document.getElementById('typewriter');
-    var typewriter = this.setupTypewriter(typer);
+    const typer = document.getElementById('typewriter');
+    const typewriter = this.setupTypewriter(typer);
     typewriter.type();
   }
 
   setupTypewriter(t) {
-    var HTML = t.innerHTML;
+    const HTML = t.innerHTML,
+      typeSpeed = 100;
 
-    t.innerHTML = "";
+    t.innerHTML = '';
 
-    var cursorPosition: number = 0,
-      tag: any = "",
-      writingTag: boolean = false,
-      tagOpen: boolean = false,
-      typeSpeed: number = 100,
-      tempTypeSpeed: number = 0;
+    let cursorPosition = 0,
+      tag,
+      writingTag = false,
+      tagOpen = false,
+      tempTypeSpeed = 0;
 
-    var type = function () {
+    const type = function () {
 
       if (writingTag === true) {
         tag += HTML[cursorPosition];
       }
 
-      if (HTML[cursorPosition] === "<") {
+      if (HTML[cursorPosition] === '<') {
         tempTypeSpeed = 0;
         if (tagOpen) {
           tagOpen = false;
           writingTag = true;
         } else {
-          tag = "";
+          tag = '';
           tagOpen = true;
           writingTag = true;
           tag += HTML[cursorPosition];
@@ -53,19 +52,18 @@ export class AboutComponent implements OnInit {
         tag.innerHTML += HTML[cursorPosition];
       }
       if (!writingTag && !tagOpen) {
-        if (HTML[cursorPosition] === " ") {
+        if (HTML[cursorPosition] === ' ') {
           tempTypeSpeed = 0;
-        }
-        else {
+        } else {
           tempTypeSpeed = (Math.random() * typeSpeed) + 50;
         }
         t.innerHTML += HTML[cursorPosition];
       }
-      if (writingTag === true && HTML[cursorPosition] === ">") {
+      if (writingTag === true && HTML[cursorPosition] === '>') {
         tempTypeSpeed = (Math.random() * typeSpeed) + 50;
         writingTag = false;
         if (tagOpen) {
-          var newSpan = document.createElement("span");
+          const newSpan = document.createElement('span');
           t.appendChild(newSpan);
           newSpan.innerHTML = tag;
           tag = newSpan.firstChild;

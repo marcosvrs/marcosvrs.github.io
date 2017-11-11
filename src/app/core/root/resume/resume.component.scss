@@ -11,9 +11,9 @@
     padding: 1rem;
     &:hover,
     &:focus {
-        background: $gray-lighter;
+        background: $gray-200;
         &>div>hr {
-            border-color: $gray-dark;
+            border-color: $gray-800;
         }
     }
 }

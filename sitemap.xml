@@ -5,4 +5,19 @@
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
+  <url>
+    <loc>https://marcosvrs.com/about</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://marcosvrs.com/resume</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://marcosvrs.com/contact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
 </urlset>

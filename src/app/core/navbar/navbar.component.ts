@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 
 /** Auxiliary variable for state */
-  collapsed: boolean = false;
+  collapsed = false;
 
 }

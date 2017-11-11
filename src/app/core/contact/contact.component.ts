@@ -1,4 +1,4 @@
-import { Component, ViewChild, isDevMode, AfterViewChecked, OnDestroy } from '@angular/core';
+import { Component, HostBinding, ViewChild, isDevMode, AfterViewChecked, OnDestroy } from '@angular/core';
 import { NgForm, NgModel, AbstractControl, FormGroup } from '@angular/forms';
 
 import { Subscription } from 'rxjs/Subscription';
@@ -8,23 +8,21 @@ import { GoogleAnalyticsService } from 'app/services/google-analytics-events.ser
 
 @Component({
   selector: 'app-contact',
-  host: {
-    class: 'container-fluid'
-  },
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
   providers: [ContactService, GoogleAnalyticsService]
 })
 export class ContactComponent implements AfterViewChecked, OnDestroy {
   /** Binding */
+  @HostBinding('class') class = 'container-fluid';
   @ViewChild('contactForm') contactForm: NgForm;
-  contactName: string = '';
-  contactEmail: string = '';
+  contactName = '';
+  contactEmail = '';
 
   /** Auxiliary variables for state */
-  loading: boolean = false;
-  error: boolean = false;
-  success: boolean = false;
+  loading = false;
+  error = false;
+  success = false;
 
   /** Auxiliary variables for Subscriptions */
   contactNameSubscribe: Subscription;
@@ -55,9 +53,10 @@ export class ContactComponent implements AfterViewChecked, OnDestroy {
         this.contactEmail = (!this.checkModelErrors(this.contactForm.form.get('email'))) ? value : '';
         break;
     }
-    let contactMessageControl: AbstractControl = this.contactForm.form.get('message');
+    const contactMessageControl: AbstractControl = this.contactForm.form.get('message');
     if (contactMessageControl && !contactMessageControl.touched) {
-      contactMessageControl.setValue('Hey Marcos!\nI just came to say hello!\n\nSincerely,\n' + this.contactName + '\n' + this.contactEmail);
+      contactMessageControl.setValue('Hey Marcos!\nI just came to say hello!\n\nSincerely,\n' +
+        this.contactName + '\n' + this.contactEmail);
     }
   }
 

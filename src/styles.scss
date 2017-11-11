@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~bootstrap/scss/bootstrap';
 @import 'variables';
 $fa-font-path: '~font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
 @import '~highlight.js/styles/default';
+@import "~bootstrap/scss/bootstrap";
 html {
     position: relative;
     min-height: 100%;
@@ -27,12 +27,17 @@ router-outlet {
 }
 
 .parallax {
-    background: no-repeat center center fixed;
+    background: no-repeat fixed center;
     background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     height: 50vh;
+}
+
+@media (pointer: coarse) {
+    .parallax {
+        background: no-repeat scroll center;
+        background-size: auto 100%;
+        scroll-behavior: smooth;
+    }
 }
 
 .modal-backdrop {

@@ -1,20 +1,20 @@
-import { Directive, ElementRef, HostListener, Input, Renderer2 } from '@angular/core';
-import { AbstractControl } from '@angular/forms';
+import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { AbstractControl, NgModel } from '@angular/forms';
 
 /**
- * Bootstrap v3/v4 Form Validation classes
+ * Bootstrap v4 Form Validation classes
  */
-const formControlClasses: string[] = ['form-control-danger', 'form-control-success', 'form-control-warning'];
+const formControlClasses: string[] = ['is-invalid', 'is-valid', 'form-control-warning'];
 const formGroupClasses: string[] = ['has-danger', 'has-success', 'has-warning'];
 
 @Directive({
-  selector: '[bsFormControl]'
+  selector: '[appBsFormControl]'
 })
 export class BsFormControlDirective {
   /**
-   * bsFormControl is a directive for styling angular form control validation 
+   * bsFormControl is a directive for styling angular form control validation
    * with Bootstrap v3/v4 form validation classes
-   * 
+   *
    * Example to use:
    * `<div class="form-group">
    *   <label class="form-control-label" for="name">Name</label>
@@ -28,15 +28,9 @@ export class BsFormControlDirective {
    *             ngModel
    *             #exampleName="ngModel">
    *   </div>`
-   *  
+   *
    */
-
-  /**
-   * Expect the ngModel as a parameter
-   */
-  @Input('bsFormControl') control: AbstractControl;
-
-  constructor(private el: ElementRef, private re: Renderer2) { }
+  constructor(private el: ElementRef, private control: NgModel, private re: Renderer2) { }
 
   /**
    * Listen for every input in the ngModel
@@ -56,10 +50,10 @@ export class BsFormControlDirective {
   /**
    * Listen to every change of ngModel
    * It's only used to get the reset event of form
-   * 
+   *
    * Can't be used to get change events of the ngModel
    * because it's fired before the validation status change
-   * 
+   *
    * @param value - Value of the ngModel
    */
   @HostListener('ngModelChange', ['$event']) onModelChange(value: any) {
@@ -72,7 +66,6 @@ export class BsFormControlDirective {
    * Check the validation of the ngModel and define the class of the elements
    */
   private handleClasses(): void {
-
     let activeClass: string[];
     if (this.control.dirty || this.control.touched) {
       if (this.control.valid) {
@@ -87,7 +80,9 @@ export class BsFormControlDirective {
       activeClass = [];
     }
 
-    const element = this.el.nativeElement;
+    console.log(activeClass);
+
+    const element: HTMLInputElement | HTMLTextAreaElement = this.el.nativeElement;
     if (element.classList.contains('form-control')) {
       formControlClasses.forEach((currentClass: string) => {
         if (currentClass === activeClass[0]) {
@@ -108,7 +103,6 @@ export class BsFormControlDirective {
         }
       });
     }
-
 
   }
 }

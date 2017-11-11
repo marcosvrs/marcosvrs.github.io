@@ -15,32 +15,32 @@
       </div>
     </section>
     <hr>
-    <section class="row align-items-center hidden-lg-up">
-      <div class="col text-center">
-        <h2>My class is Developer extended by Engineer</h2>
-      </div>
-    </section>
     <section class="row align-items-center">
       <div class="col-md-4 text-center">
         <figure>
-          <img class="img-fluid rounded profile" src="assets/perfil.png" alt="Profile Picture" loader i18n-alt>
+          <picture>
+            <source media="(min-width: 768px)" srcset="assets/perfil.png">
+            <img class="img-fluid rounded profile" src="assets/perfil.png" alt="Profile Picture" appLoader i18n-alt>
+          </picture>
           <figcaption i18n>Profile Picture</figcaption>
         </figure>
       </div>
       <div class="col-md-8 h-100 d-inline-block" i18n>
-        <h2 class="align-self-start hidden-md-down">My class is Developer implemented by Engineer.</h2>
+        <h2 class="align-self-start hidden-md-down">class Developer extends Engineer {{ '{' }}</h2>
         <br>
-        <p>As a Computer Engineer, I have studied Physics, Calculus, Computer Architecture, Network Infrastructure...
+        <p class="tab">As a Computer Engineer, I have studied Physics, Calculus, Computer Architecture, Network Infrastructure...
           <br> But what makes me love the Computer world is the Computer Programming.</p>
-        <p>At my time at the <a href="http://unisanta.br/" (click)="onClick('About', 'Click', 'Link', 'Unisanta')" target="_blank">University</a>,
-          I collaborated in an international project called
-          <a href="http://butterflysrl.com/" (click)="onClick('About', 'Click', 'Link', 'Butterfly')" target="_blank">Butterfly</a>          that became my Term paper at the end of the course.
+        <p class="tab">At my time at the
+          <a href="https://unisanta.br" (click)="onClick('About', 'Click', 'Link', 'Unisanta')" target="_blank">University</a>, I collaborated in an international project called
+          <a href="http://butterflysrl.com/" (click)="onClick('About', 'Click', 'Link', 'Butterfly')" target="_blank">Butterfly</a> that became my Term paper at the end of the course.
         </p>
-        <p>After 5 years working at <a href="http://www.rodrimar.com.br/" (click)="onClick('About', 'Click', 'Link', 'Rodrimar')"
-            target="_blank">Rodrimar</a>, I had 3 different positions: IT-Internship, Technical Support Analyst and System
-          Analyst. During my time in there I was able to gaining a wide knowledge that I consider decisive.</p>
-        <p>At this moment, I'm based in Hamburg learning German and studying to stay up to date with the latest programming
-          languages and trying to increment my working experience in another country.</p>
+        <p class="tab">After 5 years working at
+          <a href="http://www.rodrimar.com.br/" (click)="onClick('About', 'Click', 'Link', 'Rodrimar')" target="_blank">Rodrimar</a>, I had 3 different positions: IT-Internship, Technical Support Analyst and System Analyst. During
+          my time in there I was able to gaining a wide knowledge that I consider decisive.</p>
+        <p class="tab">At this moment, I'm based in Hamburg learning German and working at
+          <a href="https://tom-tailor.de">Tom Tailor</a> as a Internship Software Engineer on the complete new eCommerce Plataform, incrementing my working experience
+          in another country.</p>
+          <h2 class="align-self-end hidden-md-down">{{ '}' }}</h2>
       </div>
     </section>
   </div>
