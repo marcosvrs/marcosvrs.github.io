@@ -1,8 +1,8 @@
 /// <reference path="../../../node_modules/@types/google.analytics/index.d.ts" />
 
 import { isDevMode, Injectable } from '@angular/core';
-import { googleAnalyticsID } from 'app/ga.config.prod';
-import { googleAnalyticsIDDev } from 'app/ga.config';
+import { googleAnalyticsID as googleAnalyticsIDProd } from 'app/ga.config.prod';
+import { googleAnalyticsID as googleAnalyticsIDDev } from 'app/ga.config';
 
 @Injectable()
 export class GoogleAnalyticsService {
@@ -24,11 +24,7 @@ export class GoogleAnalyticsService {
       }, i[r].l = 1 * <any>new Date(); a = s.createElement(o),
         m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga', this.gaNewElem, this.gaElems);
-    if (isDevMode()) {
-      ga('create', googleAnalyticsIDDev, 'auto');
-    } else {
-      ga('create', googleAnalyticsID, 'auto');
-    }
+      ga('create', isDevMode() ? googleAnalyticsIDDev : googleAnalyticsIDProd, 'auto');
   }
 
   public emitEvent(eventCategory: string, eventAction: string, eventLabel: string = null, eventValue: number = null) {

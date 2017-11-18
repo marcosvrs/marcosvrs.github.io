@@ -8,7 +8,7 @@ import { GoogleAnalyticsService } from 'app/services/google-analytics-events.ser
 })
 export class ResumeComponent {
 
-  @HostBinding('class') class = 'container-fluid';
+  // @HostBinding('class') class = 'container-fluid';
 
   constructor(private googleAnalyticsService: GoogleAnalyticsService) { }
 

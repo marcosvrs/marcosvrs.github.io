@@ -9,13 +9,7 @@ export class FirebaseService {
 
   public app: firebase.App;
   constructor() {
-    let firebaseConfig: any;
-    if (isDevMode()) {
-      firebaseConfig = firebaseConfigDev;
-    } else {
-      firebaseConfig = firebaseConfigProd;
-    }
-    this.app = initializeApp(firebase);
+    this.app = initializeApp(isDevMode() ? firebaseConfigDev : firebaseConfigProd);
   }
 
 }

@@ -1,11 +1,14 @@
 <app-navbar></app-navbar>
-<div *ngIf="error" class="row">
-    <div class="col-md-6 col-lg-4 offset-md-3 offset-lg-4">
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <button type="button" class="close" aria-label="Close" (click)="error = false">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <span><strong i18n>An error occurred!</strong> {{ errorText }}</span>
+<div class="error container-fluid">
+    <div *ngIf="error" class="row justify-content-center">
+        <div class="col">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <button type="button" class="close" aria-label="Close" (click)="error = false">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <span>
+                    <strong i18n>An error occurred!</strong> {{ errorText }}</span>
+            </div>
         </div>
     </div>
 </div>

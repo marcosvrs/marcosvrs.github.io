@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "firebase": "firebase",
-    "start": "ng serve --sourcemaps",
+    "start": "ng serve",
     "build": "ng build && firebase deploy --project develop",
     "build:prod": "ng build --prod && firebase deploy --project default",
     "build:en": "ng build --output-path dist/en --base-href en --locale en --i18n-format xlf --i18n-file src/locale/messages.en.xlf",
