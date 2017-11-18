@@ -1,5 +1,4 @@
 @import 'src/variables';
-
 #technologies {
     word-break: break-all;
 }
@@ -8,27 +7,93 @@
     padding: 1rem;
     &:hover,
     &:focus {
-        background: $gray-200;
+        background: gray("200");
         &>div>hr {
-            border-color: $gray-800;
+            border-color: gray("800");
         }
     }
 }
 
 .background-img {
-    background: no-repeat fixed center;
+    background: no-repeat scroll center;
     background-size: cover;
     height: 50vh;
+    @media (min-width: 992px) {
+        background-attachment: fixed;
+    }
 }
 
 #code {
-    background-image: url('/assets/code.jpg');
+    // Extra small devices (portrait phones, less than 576px)
+    background-image: url('/assets/code_Background_576x383@2x.jpg');
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        background-image: url('/assets/code_Background_768x511@2x.jpg');
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        background-image: url('/assets/code_Background_992x661@2x.jpg');
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        background-image: url('/assets/code_Background_1200x800@2x.jpg');
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        background-image: url('/assets/code_Background_3000x2000@2x.jpg');
+    }
 }
 
 #phone {
-    background-image: url('/assets/phone.jpg');
+    // Extra small devices (portrait phones, less than 576px)
+    background-image: url('/assets/phone_Background_576x383@2x.jpg');
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        background-image: url('/assets/phone_Background_768x511@2x.jpg');
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        background-image: url('/assets/phone_Background_992x661@2x.jpg');
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        background-image: url('/assets/phone_Background_1200x800@2x.jpg');
+    }
+    
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        background-image: url('/assets/phone_Background_2384x1589@2x.jpg');
+    }
 }
 
 #tablet {
-    background-image: url('/assets/tablet.jpg');
+    // Extra small devices (portrait phones, less than 576px)
+    background-image: url('/assets/tablet_Background_576x285@2x.jpg');
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        background-image: url('/assets/tablet_Background_768x380@2x.jpg');
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        background-image: url('/assets/tablet_Background_992x491@2x.jpg');
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        background-image: url('/assets/tablet_Background_1200x595@2x.jpg');
+    }
+    
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        background-image: url('/assets/tablet_Background_2403x1192@2x.jpg');
+    }
 }

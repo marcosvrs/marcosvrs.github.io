@@ -1,7 +1,8 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 // Firebase Setup
-const serviceAccount = require('../marcosvrs-7e2686c72475.json');
+// const serviceAccount = require('../marcosvrs-development-firebase-adminsdk-7paiv-6526b7cac4.json');
+const serviceAccount = require('../marcosvrs-bc41d-firebase-adminsdk-cyrxy-99f51c4eae.json');
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: `https://${process.env.GCLOUD_PROJECT}.firebaseio.com`

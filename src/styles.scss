@@ -21,6 +21,10 @@ router-outlet {
     display: none;
 }
 
+.alert-dismissible .close {
+    right: -.5rem;
+}
+
 .icon {
     height: $icon-size;
     width: $icon-size;
@@ -41,7 +45,7 @@ router-outlet {
 }
 
 .modal-backdrop {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba($black, 0.6);
     position: fixed;
     top: 0;
     left: 0;
