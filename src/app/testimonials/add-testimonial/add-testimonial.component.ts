@@ -10,29 +10,29 @@ import { TestimonialService } from 'app/services/testimonial.service';
 })
 export class AddTestimonialComponent {
 
-  @Output() hideModalClick = new EventEmitter<boolean>();
+  // @Output() hideModalClick = new EventEmitter<boolean>();
 
-  /** Auxiliary variables for state */
-  loading = false;
-  error = false;
-  success = false;
-  linkedinLogin = false;
+  // /** Auxiliary variables for state */
+  // loading: boolean = false;
+  // error: boolean = false;
+  // success: boolean = false;
+  // linkedinLogin: boolean = false;
 
-  constructor(private testimonialService: TestimonialService) { }
+  // constructor(private testimonialService: TestimonialService) { }
 
-  onLinkedinLogin() {
-    this.testimonialService.linkedinAuth();
-  }
+  // onLinkedinLogin() {
+  //   this.testimonialService.linkedinAuth();
+  // }
 
-  onHideModalClick() {
-    this.hideModalClick.emit();
-  }
+  // onHideModalClick() {
+  //   this.hideModalClick.emit();
+  // }
 
-  addButtonClick() {
-  }
+  // addButtonClick() {
+  // }
 
-  onSubmit() {
+  // onSubmit() {
 
-  }
+  // }
 
 }
