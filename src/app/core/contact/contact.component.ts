@@ -63,7 +63,7 @@ export class ContactComponent implements AfterViewChecked, OnDestroy {
   onSubmit(values: Contact) {
     this.loading = true;
     this.success = this.error = false;
-    this.googleAnalyticsService.emitEvent('Forms', 'Submit', 'Contact');
+    this.googleAnalyticsService.emitEvent('Contact', 'Submit', 'ContactForm');
     this.contactService.sendContactMessage(values)
       .subscribe(
       response => {

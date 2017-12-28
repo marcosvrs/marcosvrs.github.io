@@ -10,6 +10,7 @@ import { TestimonialsModule } from 'app/testimonials/testimonials.module';
 import { DirectivesModule } from 'app/directives/directives.module';
 import { GoogleAnalyticsService } from 'app/services/google-analytics-events.service';
 import { FirebaseService } from 'app/services/firebase.service';
+import { FacebookService } from 'app/services/facebook.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { FirebaseService } from 'app/services/firebase.service';
     TestimonialsModule,
     DirectivesModule
   ],
-  providers: [GoogleAnalyticsService, FirebaseService],
+  providers: [GoogleAnalyticsService, FirebaseService, FacebookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
