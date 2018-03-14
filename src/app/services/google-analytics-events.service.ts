@@ -1,8 +1,6 @@
 /// <reference path="../../../node_modules/@types/google.analytics/index.d.ts" />
 
 import { isDevMode, Injectable } from '@angular/core';
-import { googleAnalyticsID as googleAnalyticsIDProd } from 'app/ga.config.prod';
-import { googleAnalyticsID as googleAnalyticsIDDev } from 'app/ga.config';
 
 @Injectable()
 export class GoogleAnalyticsService {
@@ -15,7 +13,7 @@ export class GoogleAnalyticsService {
 
   constructor() {
     this.gaInit(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga', this.gaNewElem, this.gaElems);
-    ga('create', isDevMode() ? googleAnalyticsIDDev : googleAnalyticsIDProd, 'auto');
+    ga('create', process.env.GA_ID, 'auto');
   }
 
   private gaInit(i, s, o, g, r, a, m) {

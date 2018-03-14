@@ -2,9 +2,9 @@ import { Component, HostBinding, ViewChild, isDevMode, AfterViewChecked, OnDestr
 import { NgForm, NgModel, AbstractControl, FormGroup } from '@angular/forms';
 
 import { Subscription } from 'rxjs/Subscription';
-import { Contact } from 'app/models/contact.model';
-import { ContactService } from 'app/services/contact.service';
-import { GoogleAnalyticsService } from 'app/services/google-analytics-events.service';
+import { Contact } from '../../models/contact.model';
+import { ContactService } from '../../services/contact.service';
+import { GoogleAnalyticsService } from '../../services/google-analytics-events.service';
 
 @Component({
   selector: 'app-contact',

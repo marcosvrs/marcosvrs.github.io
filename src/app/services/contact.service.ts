@@ -1,17 +1,16 @@
 import { Injectable, isDevMode } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { FirebaseService } from 'app/services/firebase.service';
-import { Contact } from 'app/models/contact.model';
+import { Contact } from '../models/contact.model';
 
 @Injectable()
 export class ContactService {
 
-  constructor(private http: Http, private firebase: FirebaseService) { }
+  constructor(private http: HttpClient) { }
 
   public sendContactMessage(message: Contact) {
     const url = '/API/sendMessage';
-    const headers = new Headers({'Content-Type': 'application/json'});
+    const headers = new HttpHeaders({'Content-Type': 'application/json'});
     if (isDevMode()) {
       console.log('url: ' + url);
       console.log('headers: ');

@@ -1,6 +1,7 @@
 {
   "projects": {
     "default": "marcosvrs-bc41d",
-    "develop": "marcosvrs-development"
+    "develop": "marcosvrs-development",
+    "staging": "marcosvrs-staging"
   }
 }

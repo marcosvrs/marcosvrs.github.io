@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import { HomeComponent } from 'app/core/root/home/home.component';
-import { ResumeComponent } from 'app/core/root/resume/resume.component';
-import { AboutComponent } from 'app/core/root/about/about.component';
-import { RootComponent } from 'app/core/root/root.component';
-import { ContactComponent } from 'app/core/contact/contact.component';
-import { TestimonialsComponent } from 'app/testimonials/testimonials.component';
+import { HomeComponent } from './core/root/home/home.component';
+import { ResumeComponent } from './core/root/resume/resume.component';
+import { AboutComponent } from './core/root/about/about.component';
+import { RootComponent } from './core/root/root.component';
+import { ContactComponent } from './core/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -22,10 +21,6 @@ const routes: Routes = [
     {
       path: 'about',
       component: AboutComponent
-    },
-    {
-      path: 'testimonials',
-      loadChildren: './testimonials/testimonials.module#TestimonialsModule'
     }],
     component: RootComponent
   },

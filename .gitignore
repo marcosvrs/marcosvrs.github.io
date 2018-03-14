@@ -8,11 +8,12 @@ ga.config.*
 
 # compiled output
 /dist
+/dist-server
 /tmp
 /out-tsc
 
 # dependencies
-node_modules
+/node_modules
 
 # IDEs and editors
 /.idea
@@ -36,8 +37,10 @@ node_modules
 /coverage
 /libpeerconnection.log
 npm-debug.log
+yarn-error.log
 testem.log
 /typings
+*.log
 package-lock.json
 
 # e2e

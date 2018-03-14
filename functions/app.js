@@ -1,16 +1,16 @@
-var express = require('express');
+const express = require('express');
 
-var reportError = require('./errors');
-var index = require('./routes/index');
+const reportError = require('./errors');
+const index = require('./routes/index');
 
-var app = express();
+const app = express();
 
 app.use('/API', index);
 //app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  var err = new Error('Not Found');
+  let err = new Error('Not Found');
   err.status = 404;
   next(err);
 });

@@ -1,5 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
-import { GoogleAnalyticsService } from 'app/services/google-analytics-events.service';
+import { GoogleAnalyticsService } from '../../../services/google-analytics-events.service';
 
 @Component({
   selector: 'app-resume',

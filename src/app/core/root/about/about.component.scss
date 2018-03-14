@@ -1,11 +1,11 @@
 @import 'src/variables';
 .typewriter {
-    background: $code-bg;
+    background: $gray-100;
 }
 
 #typewriter {
     height: 14.5rem;
-    background: $code-bg;
+    background: $gray-100;
     &:after {
         content: "|";
         animation: blink 1s step-start 0s infinite;

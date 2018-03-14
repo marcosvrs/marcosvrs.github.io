@@ -7,8 +7,8 @@ describe('ng-app App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('the Heading 1 should be Marcos Vinícius Rubido', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('Marcos Vinícius Rubido');
   });
 });
