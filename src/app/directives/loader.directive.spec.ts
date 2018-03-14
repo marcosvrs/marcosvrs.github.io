@@ -1,8 +1,8 @@
-import { ImageLoaderDirective } from './image-loader.directive';
+import { LoaderDirective } from './loader.directive';
 
-describe('ImageLoaderDirective', () => {
+describe('LoaderDirective', () => {
   it('should create an instance', () => {
-    const directive = new ImageLoaderDirective();
+    const directive = new LoaderDirective();
     expect(directive).toBeTruthy();
   });
 });
