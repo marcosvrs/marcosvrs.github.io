@@ -15,7 +15,7 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     const typer = document.getElementById('typewriter');
     const typewriter = this.setupTypewriter(typer);
-    typewriter.type();
+    setTimeout(typewriter.type(), 0);
   }
 
   setupTypewriter(t) {

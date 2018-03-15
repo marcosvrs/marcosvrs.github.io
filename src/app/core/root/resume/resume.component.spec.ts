@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResumeComponent } from './resume.component';
+import { GoogleAnalyticsService } from '../../../services/google-analytics-events.service';
 
 describe('ResumeComponent', () => {
   let component: ResumeComponent;
@@ -8,9 +9,10 @@ describe('ResumeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ResumeComponent ]
+      declarations: [ResumeComponent],
+      providers: [GoogleAnalyticsService]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

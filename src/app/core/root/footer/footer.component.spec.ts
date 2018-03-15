@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooterComponent } from './footer.component';
+import { GoogleAnalyticsService } from '../../../services/google-analytics-events.service';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
@@ -8,7 +9,8 @@ describe('FooterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FooterComponent ]
+      declarations: [ FooterComponent],
+      providers: [GoogleAnalyticsService]
     })
     .compileComponents();
   }));

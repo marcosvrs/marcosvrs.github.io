@@ -13,7 +13,7 @@ export class GoogleAnalyticsService {
 
   constructor() {
     this.gaInit(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga', this.gaNewElem, this.gaElems);
-    ga('create', process.env.GA_ID, 'auto');
+    ga('create', '', 'auto');
   }
 
   private gaInit(i, s, o, g, r, a, m) {
