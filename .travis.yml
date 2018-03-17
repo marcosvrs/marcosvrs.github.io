@@ -23,6 +23,7 @@ script:
   - npm run e2e
 
 before_deploy:
+  - npm i -g firebase-tools
   - npm run build:prod
 
 deploy:
