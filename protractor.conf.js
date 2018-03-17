@@ -27,10 +27,10 @@ let config = {
   }
 };
 
-if (process.env.TRAVIS) {
-  config.capabilities.chromeOptions = {
-    args: ['--headless', '--no-sandbox']
-  };
-}
+// if (process.env.TRAVIS) {
+//   config.capabilities.chromeOptions = {
+//     args: ['--headless', '--no-sandbox']
+//   };
+// }
 
 exports.config = config;
