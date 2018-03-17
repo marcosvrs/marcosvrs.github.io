@@ -28,7 +28,9 @@ let config = {
 };
 
 if (process.env.TRAVIS) {
-  config.capabilities.chromeOptions = ['--headless', '--no-sandbox'];
+  config.capabilities.chromeOptions = {
+    args: ['--headless', '--no-sandbox']
+  };
 }
 
 exports.config = config;
