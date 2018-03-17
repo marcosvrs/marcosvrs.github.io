@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "postdeploy": "",
     "public": "dist",
     "ignore": [
       "firebase.json",
