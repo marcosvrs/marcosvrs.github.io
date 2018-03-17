@@ -3,7 +3,7 @@
 
 const { SpecReporter } = require('jasmine-spec-reporter');
 
-exports.config = {
+let config = {
   allScriptsTimeout: 11000,
   specs: [
     './e2e/**/*.e2e-spec.ts'
@@ -26,3 +26,9 @@ exports.config = {
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   }
 };
+
+if (process.env.TRAVIS) {
+  config.capabilities.chromeOptions = ['--headless', '--no-sandbox'];
+}
+
+exports.config = config;

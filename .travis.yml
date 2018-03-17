@@ -1,7 +1,5 @@
 dist: trusty
 
-sudo: required
-
 addons:
   chrome: stable
 
@@ -19,6 +17,7 @@ before_script:
 
 before_deploy:
   - npm run e2e
+  - npm run build:prod
 
 deploy:
   skip_cleanup: true
