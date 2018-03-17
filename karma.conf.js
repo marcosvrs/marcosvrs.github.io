@@ -38,7 +38,7 @@ module.exports = function (config) {
         flags: ['--no-sandbox']
       }
     };
-    configuration.browsers.concat(['ChromeHeadless', 'ChromeHeadlessNoSandbox']);
+    configuration.browsers = ['ChromeHeadlessNoSandbox'];
     configuration.singleRun = true;
   }
   config.set(configuration);
