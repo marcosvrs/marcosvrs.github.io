@@ -28,17 +28,17 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: false,
-    customLaunchers: {
+    singleRun: false
+  };
+
+  if (process.env.TRAVIS) {
+    configuration.customLaunchers = {
       ChromeHeadlessNoSandbox: {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
-    },
-  };
-
-  if (process.env.TRAVIS) {
-    configuration.browsers = ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'];
+    };
+    configuration.browsers.concat(['ChromeHeadless', 'ChromeHeadlessNoSandbox']);
     configuration.singleRun = true;
   }
   config.set(configuration);

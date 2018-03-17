@@ -2,7 +2,7 @@ import { NavbarNav } from './navbar.po';
 
 describe('Navbar navigation', () => {
   let page: NavbarNav;
-  
+
   beforeAll(() => {
     page = new NavbarNav();
     page.navigateTo();

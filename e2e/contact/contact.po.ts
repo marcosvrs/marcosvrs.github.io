@@ -8,7 +8,7 @@ export class ContactPage {
     getNameInput() {
         return element(by.id('name'));
     }
-    
+
     setNameInput(input: string) {
         return this.getNameInput().sendKeys(input);
     }
