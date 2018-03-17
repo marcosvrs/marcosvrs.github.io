@@ -13,11 +13,6 @@ describe('Navbar navigation', () => {
     expect(page.getUrlPath()).toEqual('/resume');
   });
 
-  it('should open the About Page', () => {
-    page.gotoAboutPage().click();
-    expect(page.getUrlPath()).toEqual('/about');
-  });
-
   it('should open the Contact Page', () => {
     page.gotoContactPage().click();
     expect(page.getUrlPath()).toEqual('/contact');
@@ -26,5 +21,10 @@ describe('Navbar navigation', () => {
   it('should open the Home Page', () => {
     page.gotoHomePage().click();
     expect(page.getUrlPath()).toEqual('/');
+  });
+
+  it('should open the About Page', () => {
+    page.gotoAboutPage().click();
+    expect(page.getUrlPath()).toEqual('/about');
   });
 });

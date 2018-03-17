@@ -19,6 +19,7 @@ export class NavbarNav {
   }
 
   gotoAboutPage() {
+    browser.waitForAngularEnabled(false);
     return element(by.id('about'));
   }
 

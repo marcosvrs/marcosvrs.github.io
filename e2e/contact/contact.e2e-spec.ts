@@ -10,7 +10,7 @@ describe('Contact Page', () => {
 
     it('should auto generate the message text', () => {
         expect(page.getSubmitButton()).toBeTruthy();
-        expect(page.getSubmitButton().click()).toThrowError();
+        expect(page.getSubmitButton().isEnabled()).toBeFalsy();
         expect(page.getNameInput()).toBeTruthy();
         page.setNameInput('Marcos');
         expect(page.getEmailInput()).toBeTruthy();
@@ -19,6 +19,6 @@ describe('Contact Page', () => {
         expect(page.getMessageInput().getAttribute('value'))
             .toEqual('Hey Marcos!\nI just came to say hello!\n\nSincerely,\nMarcos\nme@marcosvrs.com');
         page.getSubmitButton().click();
-        expect(page.getMessages()).toBeTruthy();
+        expect(page.getMessages().isDisplayed()).toBeTruthy();
     });
 });
