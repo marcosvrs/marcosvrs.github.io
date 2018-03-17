@@ -32,13 +32,13 @@ module.exports = function (config) {
   };
 
   if (process.env.TRAVIS) {
-    // configuration.customLaunchers = {
-    //   ChromeHeadlessNoSandbox: {
-    //     base: 'ChromeHeadless',
-    //     flags: ['--no-sandbox']
-    //   }
-    // };
-    // configuration.browsers = ['ChromeHeadlessNoSandbox'];
+    configuration.customLaunchers = {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    };
+    configuration.browsers = ['ChromeHeadlessNoSandbox'];
     configuration.singleRun = true;
   }
   config.set(configuration);
